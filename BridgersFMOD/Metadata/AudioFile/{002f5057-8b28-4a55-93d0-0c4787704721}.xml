@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{002f5057-8b28-4a55-93d0-0c4787704721}">
+		<property name="assetPath">
+			<value>Flutes 3.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>6.4000000000000004</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2a57d902-6309-49ac-89d8-9177b918f95e}</destination>
+		</relationship>
+	</object>
+</objects>

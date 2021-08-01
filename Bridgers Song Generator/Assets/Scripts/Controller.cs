@@ -4,6 +4,5 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
-    public static int SectionCounter;
 
 }

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="MixerGroup" id="{727fa0ec-22b5-481a-84a1-2005ceb161f0}">
 		<property name="name">
-			<value>Acoustic Guitar</value>
+			<value>Acoustic Guitar (Picked)</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{ce57c0df-deb8-4124-ab5a-a4dffd23ae16}</destination>
@@ -16,12 +16,21 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{ce57c0df-deb8-4124-ab5a-a4dffd23ae16}">
 		<relationship name="effects">
+			<destination>{d10f5493-3cfd-489d-8f6a-719f0408a22a}</destination>
 			<destination>{280adea0-d515-4dab-9468-ea616a53ce80}</destination>
 			<destination>{181f8ead-1dca-4afe-8752-43a720ac7cc1}</destination>
 			<destination>{befc9585-5f84-45a2-9f77-4442d10fc29e}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{56a1a7d1-cd56-46f4-80ad-2e9e5ef1116d}" />
+	<object class="MultibandEqEffect" id="{d10f5493-3cfd-489d-8f6a-719f0408a22a}">
+		<property name="frequencyA">
+			<value>379.118347</value>
+		</property>
+		<property name="qualityA">
+			<value>0.840758622</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{280adea0-d515-4dab-9468-ea616a53ce80}" />
 	<object class="MixerSend" id="{181f8ead-1dca-4afe-8752-43a720ac7cc1}">
 		<property name="level">

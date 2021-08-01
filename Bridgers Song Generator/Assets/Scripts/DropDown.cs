@@ -12,12 +12,13 @@ public class DropDown : MonoBehaviour
 
     private void Awake()
     {
-        m_Dropdown = GetComponent<TMP_Dropdown>();
-        songChoreographer = FindObjectOfType<SongChoreographer>();
-
-        songChoreographer.PlayerNoSections += MakeNonInteractable;
-        songChoreographer.PlayerPlaying += MakeNonInteractable;
-        songChoreographer.PlayerStopped += MakeInteractable;
+        m_Dropdown = GetComponent<TMP_Dropdown>(); 
+    }
+    private void Start()
+    {
+        SongChoreographer.instance.SongNoSections += MakeNonInteractable;
+        SongChoreographer.instance.SongPlaying += MakeNonInteractable;
+        SongChoreographer.instance.SongStopped += MakeInteractable;
     }
 
     void MakeNonInteractable() => m_Dropdown.interactable = false;

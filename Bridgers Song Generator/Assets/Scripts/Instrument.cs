@@ -18,6 +18,7 @@ public enum InstrumentType
 
 public enum InstrumentPlayingStyle
 {
+    None,
     Electric,
     Acoustic,
     Picked,
@@ -29,6 +30,7 @@ public enum InstrumentPlayingStyle
     Upright,
     Shimmer,
     Radio,
+    Horns,
 }
 
 public class Instrument : MonoBehaviour
@@ -37,6 +39,8 @@ public class Instrument : MonoBehaviour
     private SongChoreographer songChoreographer;
     [SerializeField] private InstrumentType m_InstrumentType;
     [SerializeField] private List<InstrumentPlayingStyle> InstrumentStylesForDropdownMenu;
+
+    [SerializeField] private InstrumentPlayingStyle[] InstrumentInEachSection = new InstrumentPlayingStyle[7];
     public InstrumentType g_InstrumentType { get { return m_InstrumentType; } }
     public FMODUnity.StudioEventEmitter AudioSource;
     [SerializeField] private TMP_Dropdown m_Dropdown;
@@ -51,14 +55,21 @@ public class Instrument : MonoBehaviour
         timingController = FindObjectOfType<TimingController>();
         songChoreographer = FindObjectOfType<SongChoreographer>();
         //BINDING EVENTS
-        timingController.OnSongBarBegin += PlayInstrumentAtStartOfBar;
-        timingController.OnSectionBegin += PlayWholeSectionInstrument;
-        songChoreographer.PlayerNoSections += MakeInteractable;
-        songChoreographer.PlayerPlaying += MakeNonInteractable;
-        songChoreographer.PlayerStopped += MakeInteractable;
+        TimingController.instance.OnSongBarBegin += PlayInstrumentAtStartOfBar;
+        TimingController.instance.OnSongStart += PlayWholeSectionInstrument;
+        SongChoreographer.instance.SongNoSections += MakeInteractable;
+        SongChoreographer.instance.SongPlaying += MakeNonInteractable;
+        SongChoreographer.instance.SongStopped += MakeInteractable;
+        SongChoreographer.instance.SongStopped += StopEmitter;
+        SongChoreographer.instance.SongCounterChanged += ReadInstrumentFromMemory;
+        SongChoreographer.instance.SectionAdded += WritePreviousInstrumentToMemory;
+        WriteInstrumentToMemory();
+
+
 
         SetDropDownOptions();
         setToggleColor();
+        AudioSource = GetComponent<FMODUnity.StudioEventEmitter>();
     }
 
     void SetDropDownOptions()
@@ -84,6 +95,38 @@ public class Instrument : MonoBehaviour
         else { m_ToggleImage.color = Color.red; }
     }
 
+    public void WriteInstrumentToMemory()
+    {
+        int count = SongChoreographer.instance.SectionCounter;
+        InstrumentInEachSection[count] = InstrumentStylesForDropdownMenu[m_Dropdown.value];
+    }
+
+    public void WritePreviousInstrumentToMemory()
+    {
+        if (SongChoreographer.instance.m_SongState != SongState.NOSECTIONS)
+        {
+            int count = SongChoreographer.instance.SectionCounter;
+            InstrumentInEachSection[count] = InstrumentInEachSection[count - 1];
+        }
+    }
+
+    public void ReadInstrumentFromMemory()
+    {
+        int count = SongChoreographer.instance.SectionCounter;
+        InstrumentPlayingStyle inst = InstrumentInEachSection[count];
+        if(inst == InstrumentPlayingStyle.None)
+        {
+            return;
+        }
+        for(int i = 0; i < InstrumentStylesForDropdownMenu.Count; i++)
+        {
+            if(inst == InstrumentStylesForDropdownMenu[i])
+            {
+                m_Dropdown.value = i;
+            }
+        }
+    }
+
     void MakeNonInteractable() => m_Dropdown.interactable = false;
     
     void MakeInteractable() => m_Dropdown.interactable = true;
@@ -100,7 +143,6 @@ public class Instrument : MonoBehaviour
                     {
                         string FMODEvent = $"event:/{m_InstrumentType}/{timingController.g_CurrentChord}{InstrumentStylesForDropdownMenu[m_Dropdown.value]}";
                         Debug.Log(FMODEvent);
-                        //TODO This requires a null check
                         FMODUnity.RuntimeManager.PlayOneShot(FMODEvent);
                     }
                 }
@@ -119,9 +161,13 @@ public class Instrument : MonoBehaviour
         if (m_InstrumentIsActive && LastsWholeSection)
         {
             string FMODEvent = $"event:/{m_InstrumentType}/{InstrumentStylesForDropdownMenu[m_Dropdown.value]}";
-            Debug.Log(FMODEvent);
-            FMODUnity.RuntimeManager.PlayOneShot(FMODEvent);
+            AudioSource.Event = FMODEvent;
+            AudioSource.Play();
         }
 
+    }
+    public void StopEmitter()
+    {
+        AudioSource.Stop();
     }
 }

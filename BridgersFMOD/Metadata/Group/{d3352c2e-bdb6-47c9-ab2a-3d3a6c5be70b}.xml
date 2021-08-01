@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{d3352c2e-bdb6-47c9-ab2a-3d3a6c5be70b}">
+		<property name="name">
+			<value>Horns (Soft)</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{fe1bb361-0957-4691-a82e-102cfaa6ded8}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{eb7099ba-297f-4fcc-b9b9-d1c95c15846c}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{5d7932e6-d7ed-4691-9b19-7e9eb15b5195}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{fe1bb361-0957-4691-a82e-102cfaa6ded8}">
+		<relationship name="effects">
+			<destination>{aa4e2692-5c87-4a5c-8fe8-9fbd33ef3ac7}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{eb7099ba-297f-4fcc-b9b9-d1c95c15846c}" />
+	<object class="MixerBusFader" id="{aa4e2692-5c87-4a5c-8fe8-9fbd33ef3ac7}" />
+</objects>

@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class SectionChoiceButton : MonoBehaviour
 {
+   
+
     private Vector2 OriginalPosition;
     private Vector2 TargetPosition;
     private SongChoreographer songChoreographer;
@@ -19,15 +21,15 @@ public class SectionChoiceButton : MonoBehaviour
         button = GetComponent<Button>();
         songChoreographer = FindObjectOfType<SongChoreographer>();
         //BIND EVENTS
-        songChoreographer.PlayerNoSections += MakeInteractable;
-        songChoreographer.PlayerStopped += MakeInteractable;
-        songChoreographer.PlayerPlaying += MakeNonInteractable;
+        songChoreographer.SongNoSections += MakeInteractable;
+        songChoreographer.SongStopped += MakeInteractable;
+        songChoreographer.SongPlaying += MakeNonInteractable;
         m_SectionSelection.Hover += RevealButton;
     }
 
     private void Update()
     {
-        transform.localPosition = Vector2.Lerp(transform.localPosition, TargetPosition, .025f);
+        transform.localPosition = Vector2.Lerp(transform.localPosition, TargetPosition, Time.deltaTime * 10);
     }
 
     void RevealButton()

@@ -15,7 +15,6 @@ public enum ChordType
     ChordFive,
     ChordSix
 }
-
 public enum SongSectionName
 {
     INVALID,
@@ -25,8 +24,7 @@ public enum SongSectionName
     CHORUS,
     OUTRO
 }
-
-public enum PlayerState
+public enum SongState
 {
     INVALID,
     NOSECTIONS,
@@ -37,16 +35,17 @@ public enum PlayerState
 public class SongChoreographer : Controller
 {
     public static SongChoreographer instance;
-    public TimingController m_TimingController;
+    public int SectionCounter;
 
     public List<SongSection> m_SongSections;
-    public PlayerState m_PlayerState;
+    public SongState m_SongState;
 
     //PLAY STATE CONTROLLER
-    public event Action PlayerNoSections;
-    public event Action PlayerStopped;
-    public event Action PlayerPlaying;
-
+    public event Action SongNoSections;
+    public event Action SongStopped;
+    public event Action SongPlaying;
+    public event Action SongCounterChanged;
+    public event Action SectionAdded;
 
     //SONG SEQUENCE AREA
     [SerializeField] private List<Transform> m_SongSectionPositionalNodes;
@@ -55,7 +54,7 @@ public class SongChoreographer : Controller
 
     //SECTION SELECTED
     
-    [SerializeField] private TextMeshProUGUI m_SongSectionCounterTMP;
+    [SerializeField] private TextMeshProUGUI m_SongSectionHeader;
     [SerializeField] private List<TMP_Dropdown> ChordDropdowns;
     private bool CanWriteChords = true;
 
@@ -70,24 +69,25 @@ public class SongChoreographer : Controller
     private void Start()
     { 
         SetSongSectionCounter(0);
+        TimingController.instance.OnNewSectionBegin += IncrementSectionCounter;
     }
 
-    public void SetPlayerState(PlayerState playerState)
+    public void SetSongState(SongState songState)
     {
-        m_PlayerState = playerState;
+        m_SongState = songState;
 
-        switch (playerState)
+        switch (songState)
         {
-            case PlayerState.NOSECTIONS:
-                PlayerNoSections();
+            case SongState.NOSECTIONS:
+                SongNoSections();
                 break;
 
-            case PlayerState.STOPPED:
-                PlayerStopped();
+            case SongState.STOPPED:
+                SongStopped();
                 break;
 
-            case PlayerState.PLAYING:
-                PlayerPlaying();
+            case SongState.PLAYING:
+                SongPlaying();
                 break;
         }
     }
@@ -111,37 +111,42 @@ public class SongChoreographer : Controller
         {
             m_SongSections.Add(new SongSection(songSectionName, m_SongSections.Count));
             m_SongSections[m_SongSections.Count - 1].SectionToken.GetComponent<SectionToken>().SelectButton();
+          //  IncrementSectionCounter();
         }
-        
+        SetSongState(SongState.STOPPED);
+        SectionAdded();
     }
-
     public void IncrementSectionCounter()
     {
-        if(SectionCounter < m_SongSections.Count - 1)
+        int num = new int();
+        if(SectionCounter < m_SongSections.Count)
         {
-            SetSongSectionCounter(SectionCounter++);
+            num = SectionCounter;
+            num++;
+            SetSongSectionCounter(num);
         }
         else
         {
-            m_TimingController.StopClock();
+            TimingController.instance.StopClock();
         }
     }
-
     public void SetSongSectionCounter(int i)
-    {
+    { 
         if (m_SongSections.Count > 0)
         {
             SectionCounter = i;
-            m_SongSectionCounterTMP.text = m_SongSections[i].m_SongSectionName.ToString();
+            m_SongSectionHeader.text = m_SongSections[i].m_SongSectionName.ToString();
             m_SongSections[i].SectionToken.GetComponent<Button>().Select();
             ReadSongSectionToDropdowns();
-            SetPlayerState(PlayerState.STOPPED);
         }
         else
         {
-            m_SongSectionCounterTMP.text = "PICK A SECTION";
-            SetPlayerState(PlayerState.NOSECTIONS);
+            m_SongSectionHeader.text = "PICK A SECTION";
+            SetSongState(SongState.NOSECTIONS);
+            //SectionCounter = 0;
         }
+        SongCounterChanged();
+        Debug.Log($"SongSection: {SectionCounter}");
     }
 
     public void WriteToSongSection()
@@ -170,7 +175,6 @@ public class SongChoreographer : Controller
 
     public void RemoveFromSongSectionList(int i)
     {
-
         Debug.Log(i);
         if (m_SongSections.Count > 1)
         {
@@ -184,7 +188,7 @@ public class SongChoreographer : Controller
             Destroy(m_SongSections[i].SectionToken);
             m_SongSections.Clear();
             SetSongSectionCounter(0);
-            SetPlayerState(PlayerState.NOSECTIONS);
+            SetSongState(SongState.NOSECTIONS);
         }
     }
 
