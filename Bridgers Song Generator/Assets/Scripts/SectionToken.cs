@@ -24,7 +24,8 @@ public class SectionToken : MonoBehaviour
 
     public void SetSongSectionCounter()
     {
-        SongChoreographer.instance.SetSongSectionCounter(SongIndexPosition);
+        Controller.SectionCounter = SongIndexPosition;
+        Debug.Log(Controller.SectionCounter);
     }
 
     public void SelectButton()

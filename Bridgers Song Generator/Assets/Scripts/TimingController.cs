@@ -4,13 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TimingController : MonoBehaviour
+public class TimingController : Controller
 { 
     [SerializeField] private AudioClip BPM;
     [SerializeField] private AudioClip FourBarBPM;
-    public int BeatCounter, BarCount, SectionCount;
+    public int BeatCounter, BarCount;
     private bool clockStarted;
-    public int GetSectionCount { get { return SectionCount; } }
     public int GetBarCount { get { return BarCount; } }
 
     public event Action OnSongBarBegin;
@@ -22,10 +21,15 @@ public class TimingController : MonoBehaviour
     [SerializeField] private Slider m_SliderOne;
     public ChordType g_CurrentChord { get { return CurrentChord; } }
 
+    //PLAYHEAD
+    [SerializeField] private GameObject Playhead;
+    [SerializeField] private GameObject PlayheadParentOne;
+    [SerializeField] private GameObject PlayheadParentTwo;
+    
+
     private void Awake()
     {
         m_SliderOne.maxValue = BPM.length * 4;
-        UnityAudioSource.Play();
     }
     public void StartClock()
     {
@@ -33,6 +37,7 @@ public class TimingController : MonoBehaviour
         {
             StartCoroutine(ClockCoroutine());
             OnSectionBegin();
+            SongChoreographer.instance.IncrementSectionCounter();
             SongChoreographer.instance.SetPlayerState(PlayerState.PLAYING);
         }
     }
@@ -40,7 +45,6 @@ public class TimingController : MonoBehaviour
     private void Update()
     {
         m_SliderOne.value = UnityAudioSource.time;
-        Debug.Log(UnityAudioSource.time);
     }
 
     public void StopClock()
@@ -51,6 +55,7 @@ public class TimingController : MonoBehaviour
             BarCount = 0;
             BeatCounter = 0;
             SongChoreographer.instance.SetPlayerState(PlayerState.STOPPED);
+            UnityAudioSource.Stop();
             clockStarted = false;
         }
     }
@@ -60,15 +65,23 @@ public class TimingController : MonoBehaviour
         {
             clockStarted = !clockStarted;
             //TODO Better Encapsulation
-            CurrentChord = SongChoreographer.instance.m_SongSections[SectionCount].m_SongChords[BarCount];
+            CurrentChord = SongChoreographer.instance.m_SongSections[SectionCounter].m_SongChords[BarCount];
             OnSongBarBegin();
             if (!UnityAudioSource.isPlaying)
             {
                 UnityAudioSource.Play();
+                if (BarCount < 4)
+                {
+                    Playhead.transform.SetParent(PlayheadParentOne.transform);
+                }
+                else
+                {
+                    Playhead.transform.SetParent(PlayheadParentTwo.transform);
+                }
             }
             yield return new WaitForSeconds(BPM.length);
             BarCount++;
-            if(BarCount >= 4)
+            if(BarCount == 4)
             {
                 UnityAudioSource.Stop();
             }
@@ -76,9 +89,9 @@ public class TimingController : MonoBehaviour
             if(BarCount >= 8)
             {
                 BarCount = 0;
-                SectionCount++;
+                SectionCounter++;
                 OnSectionBegin();
-                IncrementSection();
+               // IncrementSection();
             }
             
             clockStarted = !clockStarted;

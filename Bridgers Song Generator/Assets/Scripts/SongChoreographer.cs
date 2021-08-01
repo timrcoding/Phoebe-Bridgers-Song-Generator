@@ -34,7 +34,7 @@ public enum PlayerState
     PLAYING
 }
 
-public class SongChoreographer : MonoBehaviour
+public class SongChoreographer : Controller
 {
     public static SongChoreographer instance;
     public TimingController m_TimingController;
@@ -54,14 +54,13 @@ public class SongChoreographer : MonoBehaviour
     public GameObject m_SectionTokenPrefab;
 
     //SECTION SELECTED
-    [SerializeField] private int m_SongSectionCounter;
+    
     [SerializeField] private TextMeshProUGUI m_SongSectionCounterTMP;
     [SerializeField] private List<TMP_Dropdown> ChordDropdowns;
     private bool CanWriteChords = true;
 
     //INSTRUMENT CONTROLLER;
     [SerializeField] private List<Instrument> Instruments;
-    [SerializeField] private InstrumentDictionary so_InstrumentDictionary;
 
     private void Awake()
     {
@@ -116,11 +115,11 @@ public class SongChoreographer : MonoBehaviour
         
     }
 
-    void IncrementSectionCounter()
+    public void IncrementSectionCounter()
     {
-        if(m_SongSectionCounter < m_SongSections.Count - 1)
+        if(SectionCounter < m_SongSections.Count - 1)
         {
-            SetSongSectionCounter(m_SongSectionCounter++);
+            SetSongSectionCounter(SectionCounter++);
         }
         else
         {
@@ -132,7 +131,7 @@ public class SongChoreographer : MonoBehaviour
     {
         if (m_SongSections.Count > 0)
         {
-            m_SongSectionCounter = i;
+            SectionCounter = i;
             m_SongSectionCounterTMP.text = m_SongSections[i].m_SongSectionName.ToString();
             m_SongSections[i].SectionToken.GetComponent<Button>().Select();
             ReadSongSectionToDropdowns();
@@ -151,7 +150,7 @@ public class SongChoreographer : MonoBehaviour
         {
             for (int i = 0; i < ChordDropdowns.Count; i++)
             {
-                m_SongSections[m_SongSectionCounter].m_SongChords[i] = (ChordType)ChordDropdowns[i].value;
+                m_SongSections[SectionCounter].m_SongChords[i] = (ChordType)ChordDropdowns[i].value;
             }
         }
     }
@@ -163,7 +162,7 @@ public class SongChoreographer : MonoBehaviour
         {
             for (int i = 0; i < ChordDropdowns.Count; i++)
             {
-                ChordDropdowns[i].value = (int) m_SongSections[m_SongSectionCounter].m_SongChords[i];
+                ChordDropdowns[i].value = (int) m_SongSections[SectionCounter].m_SongChords[i];
             }
         }
         CanWriteChords = true;
