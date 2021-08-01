@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8059b0eb855db40a8360ca71c0c39d, type: 3}
+  m_Name: Instruments 1
+  m_EditorClassIdentifier: 
+  InstrumentLookupTable:
+  - m_InstrumentType: 1
+    m_ChordToFMODString:
+    - SongChord: 1
+      FMODLookup: 
+    - SongChord: 2
+      FMODLookup: 
+    - SongChord: 3
+      FMODLookup: 
+    - SongChord: 4
+      FMODLookup: 
+    - SongChord: 5
+      FMODLookup: event:/ACOUSTIC/ChordOne
+    - SongChord: 6
+      FMODLookup: 
+  - m_InstrumentType: 2
+    m_ChordToFMODString:
+    - SongChord: 1
+      FMODLookup: 
+    - SongChord: 2
+      FMODLookup: 
+    - SongChord: 3
+      FMODLookup: 
+    - SongChord: 4
+      FMODLookup: 
+    - SongChord: 5
+      FMODLookup: 
+    - SongChord: 6
+      FMODLookup: 
+  - m_InstrumentType: 3
+    m_ChordToFMODString:
+    - SongChord: 1
+      FMODLookup: event:/BASS/ChordOne
+    - SongChord: 2
+      FMODLookup: event:/Bass/ChordTwo
+    - SongChord: 3
+      FMODLookup: 
+    - SongChord: 4
+      FMODLookup: 
+    - SongChord: 5
+      FMODLookup: 
+    - SongChord: 6
+      FMODLookup: 

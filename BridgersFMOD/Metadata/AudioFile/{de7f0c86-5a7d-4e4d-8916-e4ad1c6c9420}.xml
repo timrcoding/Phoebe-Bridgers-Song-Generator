@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{de7f0c86-5a7d-4e4d-8916-e4ad1c6c9420}">
+		<property name="assetPath">
+			<value>Korg-N1R-Metronome-Click.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.59104308390022675</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2a57d902-6309-49ac-89d8-9177b918f95e}</destination>
+		</relationship>
+	</object>
+</objects>

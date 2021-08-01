@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="EventFolder" id="{0d74623f-6c7e-4ab4-8801-6ce3dcf58dbf}">
+		<property name="name">
+			<value>METRONOME</value>
+		</property>
+		<relationship name="folder">
+			<destination>{5488e69c-21ce-4e64-a729-41958c24daa7}</destination>
+		</relationship>
+	</object>
+</objects>

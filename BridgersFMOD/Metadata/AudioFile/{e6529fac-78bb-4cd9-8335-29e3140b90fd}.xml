@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{e6529fac-78bb-4cd9-8335-29e3140b90fd}">
+		<property name="assetPath">
+			<value>Upright_Plucked_ 1.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.2160000000000002</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2a57d902-6309-49ac-89d8-9177b918f95e}</destination>
+		</relationship>
+	</object>
+</objects>

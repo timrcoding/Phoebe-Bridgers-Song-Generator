@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{727fa0ec-22b5-481a-84a1-2005ceb161f0}">
+		<property name="name">
+			<value>Acoustic Guitar</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{ce57c0df-deb8-4124-ab5a-a4dffd23ae16}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{56a1a7d1-cd56-46f4-80ad-2e9e5ef1116d}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{5d7932e6-d7ed-4691-9b19-7e9eb15b5195}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{ce57c0df-deb8-4124-ab5a-a4dffd23ae16}">
+		<relationship name="effects">
+			<destination>{280adea0-d515-4dab-9468-ea616a53ce80}</destination>
+			<destination>{181f8ead-1dca-4afe-8752-43a720ac7cc1}</destination>
+			<destination>{befc9585-5f84-45a2-9f77-4442d10fc29e}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{56a1a7d1-cd56-46f4-80ad-2e9e5ef1116d}" />
+	<object class="MixerBusFader" id="{280adea0-d515-4dab-9468-ea616a53ce80}" />
+	<object class="MixerSend" id="{181f8ead-1dca-4afe-8752-43a720ac7cc1}">
+		<property name="level">
+			<value>-7</value>
+		</property>
+		<property name="inputFormat">
+			<value>1</value>
+		</property>
+		<relationship name="mixerReturn">
+			<destination>{16590bdb-2b7b-4e8e-af78-f7a11e2948df}</destination>
+		</relationship>
+	</object>
+	<object class="MixerSend" id="{befc9585-5f84-45a2-9f77-4442d10fc29e}">
+		<property name="level">
+			<value>-11.5</value>
+		</property>
+		<property name="inputFormat">
+			<value>1</value>
+		</property>
+		<relationship name="mixerReturn">
+			<destination>{e76adedf-eeb7-42ee-80b7-fce63ec14129}</destination>
+		</relationship>
+	</object>
+</objects>
