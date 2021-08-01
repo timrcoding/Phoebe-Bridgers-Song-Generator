@@ -69,8 +69,8 @@ public class SongChoreographer : MonoBehaviour
     }
 
     private void Start()
-    {
-        SetPlayerState(PlayerState.NOSECTIONS);
+    { 
+        SetSongSectionCounter(0);
     }
 
     public void SetPlayerState(PlayerState playerState)
@@ -114,6 +114,18 @@ public class SongChoreographer : MonoBehaviour
             m_SongSections[m_SongSections.Count - 1].SectionToken.GetComponent<SectionToken>().SelectButton();
         }
         
+    }
+
+    void IncrementSectionCounter()
+    {
+        if(m_SongSectionCounter < m_SongSections.Count - 1)
+        {
+            SetSongSectionCounter(m_SongSectionCounter++);
+        }
+        else
+        {
+            m_TimingController.StopClock();
+        }
     }
 
     public void SetSongSectionCounter(int i)
@@ -206,7 +218,7 @@ public class SongChoreographer : MonoBehaviour
     {
         SectionToken = GameObject.Instantiate(SongChoreographer.instance.m_SectionTokenPrefab);
         SectionToken.GetComponent<SectionToken>().SetVariables(m_SongSectionName, m_SongIndexPosition);
-        SectionToken.transform.parent = SongChoreographer.instance.m_SectionTokenParent;
+        SectionToken.transform.SetParent(SongChoreographer.instance.m_SectionTokenParent);
         SectionToken.transform.localPosition = new Vector3(500, 0, 0);
         SectionToken.transform.localScale = new Vector3(1, 1, 1);
     }

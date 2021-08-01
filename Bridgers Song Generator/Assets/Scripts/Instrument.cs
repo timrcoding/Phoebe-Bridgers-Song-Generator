@@ -96,10 +96,13 @@ public class Instrument : MonoBehaviour
             {
                 if (ChordFollowingInstrument)
                 {
-                    string FMODEvent = $"event:/{m_InstrumentType}/{timingController.g_CurrentChord}{InstrumentStylesForDropdownMenu[m_Dropdown.value]}";
-                    Debug.Log(FMODEvent);
-                    //TODO This requires a null check
-                    FMODUnity.RuntimeManager.PlayOneShot(FMODEvent);
+                    if (timingController.g_CurrentChord != ChordType.INVALID)
+                    {
+                        string FMODEvent = $"event:/{m_InstrumentType}/{timingController.g_CurrentChord}{InstrumentStylesForDropdownMenu[m_Dropdown.value]}";
+                        Debug.Log(FMODEvent);
+                        //TODO This requires a null check
+                        FMODUnity.RuntimeManager.PlayOneShot(FMODEvent);
+                    }
                 }
                 else
                 {

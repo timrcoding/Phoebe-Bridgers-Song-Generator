@@ -68,6 +68,75 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3166
+--- !u!114 &-8926793371918275205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ELECTRIC/ChordFiveElectric
+  m_EditorClassIdentifier: 
+  Path: event:/ELECTRIC/ChordFiveElectric
+  guid: b6bdfd269fad2a43b2fd049842dc3457
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
+--- !u!114 &-8787323914913880728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ACOUSTIC/ChordThreeStrummed
+  m_EditorClassIdentifier: 
+  Path: event:/ACOUSTIC/ChordThreeStrummed
+  guid: 804c70f1c65c32499d081d584a4d9535
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3166
+--- !u!114 &-8054163465310500287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/KEYS/ChordFourFelt
+  m_EditorClassIdentifier: 
+  Path: event:/KEYS/ChordFourFelt
+  guid: b4cae7e248a32d4db30ba240b82d8c2e
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
 --- !u!114 &-7878248771796211593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,6 +159,121 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3166
+--- !u!114 &-7858574257658340997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BASS/ChordFourBowed
+  m_EditorClassIdentifier: 
+  Path: event:/BASS/ChordFourBowed
+  guid: b6b56f4b2dc47a48be51b3c4d654a9e5
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
+--- !u!114 &-7796733016882439618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ACOUSTIC/ChordFourPicked
+  m_EditorClassIdentifier: 
+  Path: event:/ACOUSTIC/ChordFourPicked
+  guid: 3dfa3641a8875741a662a126763f9f31
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3166
+--- !u!114 &-7775224718737049961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/KEYS/ChordFiveFelt
+  m_EditorClassIdentifier: 
+  Path: event:/KEYS/ChordFiveFelt
+  guid: 5c8a95d3995a714ca3dacce62bcd3e4f
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
+--- !u!114 &-7761523831278705232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/STRINGS/ChordTwo
+  m_EditorClassIdentifier: 
+  Path: event:/STRINGS/ChordTwo
+  guid: bf4ddf8c70b8df4589701cc9d66d5a71
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-7517455407835342856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ELECTRIC/ChordTwoElectric
+  m_EditorClassIdentifier: 
+  Path: event:/ELECTRIC/ChordTwoElectric
+  guid: bf20c89fefef8f4a95d3d414b62ed8d5
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
 --- !u!114 &-7448813513721040477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,6 +363,75 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3216
+--- !u!114 &-7131657887503575146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BASS/ChordOneBowed
+  m_EditorClassIdentifier: 
+  Path: event:/BASS/ChordOneBowed
+  guid: 909f79e8c55b8043bbb68a6d2efc7f4f
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
+--- !u!114 &-7127264282501919924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BASS/ChordFiveBowed
+  m_EditorClassIdentifier: 
+  Path: event:/BASS/ChordFiveBowed
+  guid: b2ed10478ca4d346a9a63df0c2a9582e
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
+--- !u!114 &-6954346532403046628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ACOUSTIC/ChordFourStrummed
+  m_EditorClassIdentifier: 
+  Path: event:/ACOUSTIC/ChordFourStrummed
+  guid: a85063ea644b1441b7883bbe7cc0ec29
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3166
 --- !u!114 &-6932865793663605588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,6 +514,29 @@ MonoBehaviour:
   guid: 909f79e8c55b8043bbb68a6d2efc7f4f
   Banks:
   - {fileID: 8876563325816171204}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
+--- !u!114 &-6150631312616049093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BASS/ChordFourAcoustic
+  m_EditorClassIdentifier: 
+  Path: event:/BASS/ChordFourAcoustic
+  guid: 96810fa99731df46967da25cc82bed66
+  Banks:
+  - {fileID: 2669202860340604208}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -404,6 +680,52 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3216
+--- !u!114 &-5066615593853792684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BASS/ChordOneAcoustic
+  m_EditorClassIdentifier: 
+  Path: event:/BASS/ChordOneAcoustic
+  guid: 4dee575a8d8ff84dbf6e49feb9a9b908
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
+--- !u!114 &-4935342512940291656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BASS/ChordFiveElectric
+  m_EditorClassIdentifier: 
+  Path: event:/BASS/ChordFiveElectric
+  guid: e4802095508b8046bd6b1a2c27d50ba5
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
 --- !u!114 &-4893787843606415394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,6 +749,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3216
+--- !u!114 &-4424188132575165430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ACOUSTIC/ChordFiveStrummed
+  m_EditorClassIdentifier: 
+  Path: event:/ACOUSTIC/ChordFiveStrummed
+  guid: cbf9c669d381574888fc54f75d1b02a5
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3166
 --- !u!114 &-4415064846419721894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -588,6 +933,52 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3166
+--- !u!114 &-3279868177356742266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BASS/ChordFourElectric
+  m_EditorClassIdentifier: 
+  Path: event:/BASS/ChordFourElectric
+  guid: 02f28c6129ea7449a764e7bce71fa526
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
+--- !u!114 &-3244179786488351540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/KEYS/ChordFourUpright
+  m_EditorClassIdentifier: 
+  Path: event:/KEYS/ChordFourUpright
+  guid: a76375b20c0a064c903cbbb44f9f66c4
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
 --- !u!114 &-3173576930938524538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -634,6 +1025,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3216
+--- !u!114 &-2928055847848881826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DRUMS/Sticks
+  m_EditorClassIdentifier: 
+  Path: event:/DRUMS/Sticks
+  guid: 3500e93151a305489af5326cac81fd0a
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3176
 --- !u!114 &-2846042668806564899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -650,6 +1064,52 @@ MonoBehaviour:
   guid: a85063ea644b1441b7883bbe7cc0ec29
   Banks:
   - {fileID: 8876563325816171204}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3166
+--- !u!114 &-2834570381405003885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BASS/ChordSixAcoustic
+  m_EditorClassIdentifier: 
+  Path: event:/BASS/ChordSixAcoustic
+  guid: c2818505b325dc4ca3482ac4308d4b5b
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
+--- !u!114 &-2739190324970262940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ACOUSTIC/ChordTwoPicked
+  m_EditorClassIdentifier: 
+  Path: event:/ACOUSTIC/ChordTwoPicked
+  guid: fcb9a08a52094542a9e56e507eb32265
+  Banks:
+  - {fileID: 2669202860340604208}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -676,6 +1136,98 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-2614097649022248447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ACOUSTIC/ChordTwoStrummed
+  m_EditorClassIdentifier: 
+  Path: event:/ACOUSTIC/ChordTwoStrummed
+  guid: ab0cc22ff411e14dbb4b4eb3823835de
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3166
+--- !u!114 &-2603150621620570852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ACOUSTIC/ChordThreePicked
+  m_EditorClassIdentifier: 
+  Path: event:/ACOUSTIC/ChordThreePicked
+  guid: a090df11b9409c4fbe1c7fbab9135846
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3166
+--- !u!114 &-2444644717580431646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/KEYS/ChordThreeFelt
+  m_EditorClassIdentifier: 
+  Path: event:/KEYS/ChordThreeFelt
+  guid: e35be42ef4bd534e8ca4a535f9bb76f0
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
+--- !u!114 &-2335056063854275709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/KEYS/ChordThreeUpright
+  m_EditorClassIdentifier: 
+  Path: event:/KEYS/ChordThreeUpright
+  guid: 41da49252e54e04bbd7bcc821d19c42b
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
 --- !u!114 &-2202636317134654657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -881,6 +1433,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3216
+--- !u!114 &-1363668738741863329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/STRINGS/ChordThree
+  m_EditorClassIdentifier: 
+  Path: event:/STRINGS/ChordThree
+  guid: 70bd572c76028146971ed38fd4858496
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-1349491397520248195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -903,6 +1478,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3216
+--- !u!114 &-1328098711654454127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/STRINGS/ChordOne
+  m_EditorClassIdentifier: 
+  Path: event:/STRINGS/ChordOne
+  guid: 24c064033140964e95af3944fc5f55ab
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-1137702629414553353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -925,6 +1523,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3216
+--- !u!114 &-1027722934544127730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BASS/ChordOneElectric
+  m_EditorClassIdentifier: 
+  Path: event:/BASS/ChordOneElectric
+  guid: 1081951671a9364cb405769583837fb3
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
 --- !u!114 &-961499037949874972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -940,6 +1561,29 @@ MonoBehaviour:
   Path: event:/KEYS/ChordFive
   guid: 5c8a95d3995a714ca3dacce62bcd3e4f
   Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
+--- !u!114 &-889699732697455514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DRUMS/Brushes
+  m_EditorClassIdentifier: 
+  Path: event:/DRUMS/Brushes
+  guid: 9aedd7ba9a74a64dad4eda4c62aa3d45
+  Banks:
+  - {fileID: 2669202860340604208}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1025,6 +1669,52 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3216
+--- !u!114 &-704102753320087569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BASS/ChordFiveAcoustic
+  m_EditorClassIdentifier: 
+  Path: event:/BASS/ChordFiveAcoustic
+  guid: 9e44ea4b92fd12428955a000f07b7eb9
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
+--- !u!114 &-525325838358141873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ACOUSTIC/ChordOneStrummed
+  m_EditorClassIdentifier: 
+  Path: event:/ACOUSTIC/ChordOneStrummed
+  guid: 4390328df9edbe45910877fd42f37df8
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3166
 --- !u!114 &-486085365842800251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1048,6 +1738,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3166
+--- !u!114 &-451221334711558136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/KEYS/ChordFiveUpright
+  m_EditorClassIdentifier: 
+  Path: event:/KEYS/ChordFiveUpright
+  guid: 3fe3f0bd9509da4ea1f30978934ad678
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
 --- !u!114 &-172793015754634611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1070,6 +1783,52 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3216
+--- !u!114 &-133295179905455184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ACOUSTIC/ChordFivePicked
+  m_EditorClassIdentifier: 
+  Path: event:/ACOUSTIC/ChordFivePicked
+  guid: e685afcf9f8c644b8a12dc89e93c6518
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3166
+--- !u!114 &-51969787761973939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BASS/ChordTwoBowed
+  m_EditorClassIdentifier: 
+  Path: event:/BASS/ChordTwoBowed
+  guid: 1cdd2ac5ea4e304285ce66ac7dba4fa4
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1083,73 +1842,72 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 1738263603376184742}
-  - {fileID: 8876563325816171204}
+  - {fileID: 2417467114433996645}
+  - {fileID: 2669202860340604208}
   EditorEvents:
-  - {fileID: 1623245986202227887}
-  - {fileID: 8808516165536093369}
-  - {fileID: 906793255643540724}
-  - {fileID: 7850334812207475737}
-  - {fileID: -1991988167233987529}
-  - {fileID: 2444095789120158138}
-  - {fileID: 7008594406465536053}
-  - {fileID: 1681376635872763685}
-  - {fileID: 2709065001104001479}
-  - {fileID: -4415064846419721894}
-  - {fileID: 1794879904190123251}
-  - {fileID: 2749846757167024679}
-  - {fileID: 3401716470935181730}
-  - {fileID: 8504678957904610052}
-  - {fileID: -4067429436601215667}
-  - {fileID: 6699187542714740037}
-  - {fileID: -5654817021529077128}
-  - {fileID: 3977608393650564726}
-  - {fileID: 1277150234215796369}
-  - {fileID: 6127140711204025938}
-  - {fileID: -486085365842800251}
-  - {fileID: -3494432844104357631}
-  - {fileID: -2846042668806564899}
-  - {fileID: 8807392011269348687}
-  - {fileID: -4301344437806060722}
-  - {fileID: 1085749288582842021}
-  - {fileID: -5147078094317019599}
-  - {fileID: -4893787843606415394}
-  - {fileID: -5835550806281917912}
-  - {fileID: -1691689061214068312}
-  - {fileID: 8063239890374640152}
-  - {fileID: -6720554973969002571}
-  - {fileID: 7888300083684443260}
-  - {fileID: -3532783880955224178}
-  - {fileID: -5551162403258523564}
-  - {fileID: -2202636317134654657}
-  - {fileID: -4254710518548648040}
-  - {fileID: -1820156457283018070}
-  - {fileID: 562923851982557402}
-  - {fileID: 494284904696217882}
-  - {fileID: 3901898448850335537}
-  - {fileID: -6241223291293794280}
-  - {fileID: -1904245458194039953}
-  - {fileID: 6713032446621329832}
-  - {fileID: -9002429907361780358}
-  - {fileID: 5370245202603245657}
-  - {fileID: 2321861372826717649}
-  - {fileID: -7363268262046338357}
-  - {fileID: -3566071224252940570}
-  - {fileID: -3173576930938524538}
-  - {fileID: -2933939763719798628}
-  - {fileID: 5032406297000208947}
-  - {fileID: 7580692659709656428}
-  - {fileID: 3614011547029091128}
-  - {fileID: 6915988989760646345}
-  - {fileID: -742825296281707576}
-  - {fileID: -1498690311056366848}
-  - {fileID: 7248585515949179810}
+  - {fileID: -3279868177356742266}
+  - {fileID: 1810328672818864695}
+  - {fileID: 4331946124892949398}
+  - {fileID: 4458072046241897619}
+  - {fileID: -1027722934544127730}
+  - {fileID: 7645958980293119984}
+  - {fileID: 4069100114236879540}
+  - {fileID: -51969787761973939}
+  - {fileID: 317726883133589242}
+  - {fileID: -1328098711654454127}
+  - {fileID: 5462954134068469791}
+  - {fileID: -2928055847848881826}
+  - {fileID: 4261929862683899713}
+  - {fileID: -7796733016882439618}
+  - {fileID: -451221334711558136}
+  - {fileID: -2335056063854275709}
+  - {fileID: -525325838358141873}
+  - {fileID: 1515040362287168651}
+  - {fileID: -5066615593853792684}
+  - {fileID: 4505595833654345618}
+  - {fileID: 2782567773585372319}
+  - {fileID: -7775224718737049961}
+  - {fileID: 4559916620523832375}
+  - {fileID: -1363668738741863329}
+  - {fileID: 1766167497539249643}
+  - {fileID: 449392224767696887}
+  - {fileID: -8787323914913880728}
+  - {fileID: -7131657887503575146}
+  - {fileID: 4050528718765371410}
+  - {fileID: -6150631312616049093}
+  - {fileID: 1342758879147461807}
+  - {fileID: -889699732697455514}
+  - {fileID: 4385555574769989266}
+  - {fileID: -704102753320087569}
+  - {fileID: 7586975247063900712}
+  - {fileID: -2603150621620570852}
+  - {fileID: -3244179786488351540}
+  - {fileID: -6954346532403046628}
+  - {fileID: -2614097649022248447}
+  - {fileID: -7127264282501919924}
+  - {fileID: -8054163465310500287}
+  - {fileID: -7858574257658340997}
+  - {fileID: -8926793371918275205}
+  - {fileID: -7517455407835342856}
+  - {fileID: -7761523831278705232}
+  - {fileID: -2834570381405003885}
+  - {fileID: 7886387092594083402}
+  - {fileID: -4424188132575165430}
+  - {fileID: 6044023726418162571}
+  - {fileID: 8904029422189125343}
+  - {fileID: 6428690826572604482}
+  - {fileID: 5739919215023621322}
+  - {fileID: 3837952730413556331}
+  - {fileID: -2444644717580431646}
+  - {fileID: -4935342512940291656}
+  - {fileID: -133295179905455184}
+  - {fileID: -2739190324970262940}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 8876563325816171204}
+  - {fileID: 2669202860340604208}
   StringsBanks:
-  - {fileID: 1738263603376184742}
-  stringsBankWriteTime: 637633627065126475
+  - {fileID: 2417467114433996645}
+  stringsBankWriteTime: 637634059109283712
   cacheVersion: 6
 --- !u!114 &287872486773381807
 MonoBehaviour:
@@ -1166,6 +1924,52 @@ MonoBehaviour:
   Path: event:/KEYS/ChordThree
   guid: e35be42ef4bd534e8ca4a535f9bb76f0
   Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
+--- !u!114 &317726883133589242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BASS/ChordThreeBowed
+  m_EditorClassIdentifier: 
+  Path: event:/BASS/ChordThreeBowed
+  guid: 2120c58a56c2d94f822cac12ea025640
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
+--- !u!114 &449392224767696887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BASS/ChordThreeElectric
+  m_EditorClassIdentifier: 
+  Path: event:/BASS/ChordThreeElectric
+  guid: 7e6d37ddd4a7f44ca688d75692822abe
+  Banks:
+  - {fileID: 2669202860340604208}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1443,6 +2247,52 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3166
+--- !u!114 &1342758879147461807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/KEYS/ChordSixFelt
+  m_EditorClassIdentifier: 
+  Path: event:/KEYS/ChordSixFelt
+  guid: 973775a7b158b34c92e7db88b5d91bf5
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
+--- !u!114 &1515040362287168651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ACOUSTIC/ChordSixStrummed
+  m_EditorClassIdentifier: 
+  Path: event:/ACOUSTIC/ChordSixStrummed
+  guid: 481a8166a4f8d64ea42c98d0532b61d2
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3166
 --- !u!114 &1623245986202227887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1510,6 +2360,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 3716
   Exists: 1
+--- !u!114 &1766167497539249643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BASS/ChordSixElectric
+  m_EditorClassIdentifier: 
+  Path: event:/BASS/ChordSixElectric
+  guid: 755a87301368a747bbef2b51254c85a8
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
 --- !u!114 &1794879904190123251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1533,6 +2406,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3166
+--- !u!114 &1810328672818864695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BASS/ChordSixBowed
+  m_EditorClassIdentifier: 
+  Path: event:/BASS/ChordSixBowed
+  guid: 0590c40e70b59e4bbbcf4f3c8e548b42
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
 --- !u!114 &1867940184281592211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1622,6 +2518,27 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3216
+--- !u!114 &2417467114433996645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Instruments.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../BridgersFMOD/Build/Desktop/Instruments.strings.bank
+  Name: Instruments.strings
+  StudioPath: bank:/Instruments.strings
+  lastModified: 637634059109283712
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 3664
+  Exists: 1
 --- !u!114 &2444095789120158138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1645,6 +2562,25 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &2669202860340604208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Instruments.bank
+  m_EditorClassIdentifier: 
+  Path: ../BridgersFMOD/Build/Desktop/Instruments.bank
+  Name: Instruments
+  StudioPath: bank:/Instruments
+  lastModified: 637634059109193695
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &2709065001104001479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1684,6 +2620,29 @@ MonoBehaviour:
   guid: 755a87301368a747bbef2b51254c85a8
   Banks:
   - {fileID: 8876563325816171204}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
+--- !u!114 &2782567773585372319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BASS/ChordThreeAcoustic
+  m_EditorClassIdentifier: 
+  Path: event:/BASS/ChordThreeAcoustic
+  guid: 5a37ec6dc055b640b3e0cdb8e68df208
+  Banks:
+  - {fileID: 2669202860340604208}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1804,6 +2763,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3216
+--- !u!114 &3837952730413556331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BASS/ChordTwoAcoustic
+  m_EditorClassIdentifier: 
+  Path: event:/BASS/ChordTwoAcoustic
+  guid: dfe32e7e91c3de43a4b29f1d1d765105
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
 --- !u!114 &3901898448850335537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1850,6 +2832,52 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3166
+--- !u!114 &4050528718765371410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/KEYS/ChordOneUpright
+  m_EditorClassIdentifier: 
+  Path: event:/KEYS/ChordOneUpright
+  guid: 94b9ec7a5e0ed9459a14eeb007042f8a
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
+--- !u!114 &4069100114236879540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/KEYS/ChordTwoUpright
+  m_EditorClassIdentifier: 
+  Path: event:/KEYS/ChordTwoUpright
+  guid: 13baca90924ea741a8e75b811254b979
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
 --- !u!114 &4088989026392779237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1865,6 +2893,75 @@ MonoBehaviour:
   Path: event:/ELECTRIC/ChordTwo
   guid: bf20c89fefef8f4a95d3d414b62ed8d5
   Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
+--- !u!114 &4261929862683899713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ACOUSTIC/ChordOnePicked
+  m_EditorClassIdentifier: 
+  Path: event:/ACOUSTIC/ChordOnePicked
+  guid: 38f4960b24dee84384124a312850b6eb
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3166
+--- !u!114 &4331946124892949398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/STRINGS/ChordFive
+  m_EditorClassIdentifier: 
+  Path: event:/STRINGS/ChordFive
+  guid: 075edab3ea2f7c4b90cb8515e60fbfd1
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &4385555574769989266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ELECTRIC/ChordSixElectric
+  m_EditorClassIdentifier: 
+  Path: event:/ELECTRIC/ChordSixElectric
+  guid: 9ce1da090c0ed4479c3ee018e777c407
+  Banks:
+  - {fileID: 2669202860340604208}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1894,6 +2991,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3216
+--- !u!114 &4458072046241897619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ELECTRIC/ChordOneElectric
+  m_EditorClassIdentifier: 
+  Path: event:/ELECTRIC/ChordOneElectric
+  guid: 0f64e6d4ad35e14ca92dff5b5be48cd0
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
 --- !u!114 &4459052669513500582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1909,6 +3029,29 @@ MonoBehaviour:
   Path: event:/ELECTRIC/ChordSix
   guid: 9ce1da090c0ed4479c3ee018e777c407
   Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
+--- !u!114 &4505595833654345618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/KEYS/ChordTwoFelt
+  m_EditorClassIdentifier: 
+  Path: event:/KEYS/ChordTwoFelt
+  guid: 56f663b8a3e4f94b919e6f1fc6372aec
+  Banks:
+  - {fileID: 2669202860340604208}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1938,6 +3081,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3216
+--- !u!114 &4559916620523832375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/METRONOME/Metronome
+  m_EditorClassIdentifier: 
+  Path: event:/METRONOME/Metronome
+  guid: 6ad511816db1e345bd9d851eac9ab32a
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 591
 --- !u!114 &5007369295218867728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2028,6 +3194,52 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3216
+--- !u!114 &5462954134068469791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ELECTRIC/ChordFourElectric
+  m_EditorClassIdentifier: 
+  Path: event:/ELECTRIC/ChordFourElectric
+  guid: 33db2ab4e6c541489834fed5fa920bc4
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
+--- !u!114 &5739919215023621322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ACOUSTIC/ChordSixPicked
+  m_EditorClassIdentifier: 
+  Path: event:/ACOUSTIC/ChordSixPicked
+  guid: de844e5a28628542bd5dda47f1047ffb
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3166
 --- !u!114 &5775632601807567079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2094,6 +3306,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3216
+--- !u!114 &6044023726418162571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/KEYS/ChordOneFelt
+  m_EditorClassIdentifier: 
+  Path: event:/KEYS/ChordOneFelt
+  guid: cccc5bca80b34e468a1b559f839efe04
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
 --- !u!114 &6127140711204025938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2132,6 +3367,29 @@ MonoBehaviour:
   Path: event:/DRUMS/Loop
   guid: 9aedd7ba9a74a64dad4eda4c62aa3d45
   Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
+--- !u!114 &6428690826572604482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BASS/ChordTwoElectric
+  m_EditorClassIdentifier: 
+  Path: event:/BASS/ChordTwoElectric
+  guid: dba7b35fbd9cb3489be1fbc0c84d4ebd
+  Banks:
+  - {fileID: 2669202860340604208}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2366,6 +3624,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3216
+--- !u!114 &7586975247063900712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ELECTRIC/ChordThreeElectric
+  m_EditorClassIdentifier: 
+  Path: event:/ELECTRIC/ChordThreeElectric
+  guid: 9e6801379876f347a64a74cdd59fb6b0
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
 --- !u!114 &7636646318412203949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2389,6 +3670,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3216
+--- !u!114 &7645958980293119984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/STRINGS/ChordFour
+  m_EditorClassIdentifier: 
+  Path: event:/STRINGS/ChordFour
+  guid: 1290a438467c2645ba6e79c0312c1adb
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &7763449782632362248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2478,6 +3782,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &7886387092594083402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/KEYS/ChordSixUpright
+  m_EditorClassIdentifier: 
+  Path: event:/KEYS/ChordSixUpright
+  guid: c5cd6a502a3fda4db2ae3889c6fe882f
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3216
 --- !u!114 &7888300083684443260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2679,6 +4006,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &8904029422189125343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/STRINGS/ChordSix
+  m_EditorClassIdentifier: 
+  Path: event:/STRINGS/ChordSix
+  guid: cdf40e0c07142e4f9da145888b1d7602
+  Banks:
+  - {fileID: 2669202860340604208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &9033522689349489256
 MonoBehaviour:
   m_ObjectHideFlags: 0
