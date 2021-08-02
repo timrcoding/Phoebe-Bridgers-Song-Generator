@@ -9,6 +9,7 @@ public class SectionToken : MonoBehaviour
    [SerializeField] private TextMeshProUGUI SectionTokenText;
    [SerializeField] private int SongIndexPosition;
    [SerializeField] private Button DestroyButton;
+   [SerializeField] private Button CopyButton;
    private Button button;
 
 
@@ -18,6 +19,7 @@ public class SectionToken : MonoBehaviour
         SongChoreographer.instance.SongNoSections += MakeInteractable;
         SongChoreographer.instance.SongStopped += MakeInteractable;
         SongChoreographer.instance.SongPlaying += MakeNonInteractable;
+        SongChoreographer.instance.SetupCopyElement += PrepareCopy;
     }
     public void SetVariables(SongSectionName songSectionName, int songIndexPosition)
     {
@@ -44,6 +46,17 @@ public class SectionToken : MonoBehaviour
         }
         
     }
+
+    public void SetupCopy()
+    {
+        SongChoreographer.instance.setupCopy(SongIndexPosition);
+    }
+
+    void PrepareCopy()
+    {
+        
+    }
+
 
     public void RemoveFromSongSectionList()
     {

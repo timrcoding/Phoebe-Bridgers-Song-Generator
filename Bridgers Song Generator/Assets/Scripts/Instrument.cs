@@ -18,6 +18,7 @@ public enum InstrumentType
 
 public enum InstrumentPlayingStyle
 {
+    Invalid,
     None,
     Electric,
     Acoustic,
@@ -31,12 +32,14 @@ public enum InstrumentPlayingStyle
     Shimmer,
     Radio,
     Horns,
+    Twang,
+    Harmonics,
+    Arctic,
+    Shaker,
 }
 
 public class Instrument : MonoBehaviour
 {
-    private TimingController timingController;
-    private SongChoreographer songChoreographer;
     [SerializeField] private InstrumentType m_InstrumentType;
     [SerializeField] private List<InstrumentPlayingStyle> InstrumentStylesForDropdownMenu;
 
@@ -52,24 +55,20 @@ public class Instrument : MonoBehaviour
     public bool LastsWholeSection;
     void Start()
     {
-        timingController = FindObjectOfType<TimingController>();
-        songChoreographer = FindObjectOfType<SongChoreographer>();
+        SetDropDownOptions();
+        setToggleColor();
+        AudioSource = GetComponent<FMODUnity.StudioEventEmitter>();
+
         //BINDING EVENTS
         TimingController.instance.OnSongBarBegin += PlayInstrumentAtStartOfBar;
         TimingController.instance.OnSongStart += PlayWholeSectionInstrument;
-        SongChoreographer.instance.SongNoSections += MakeInteractable;
+        SongChoreographer.instance.SongNoSections += MakeNonInteractable;
         SongChoreographer.instance.SongPlaying += MakeNonInteractable;
         SongChoreographer.instance.SongStopped += MakeInteractable;
         SongChoreographer.instance.SongStopped += StopEmitter;
         SongChoreographer.instance.SongCounterChanged += ReadInstrumentFromMemory;
         SongChoreographer.instance.SectionAdded += WritePreviousInstrumentToMemory;
-        WriteInstrumentToMemory();
-
-
-
-        SetDropDownOptions();
-        setToggleColor();
-        AudioSource = GetComponent<FMODUnity.StudioEventEmitter>();
+        ReadInstrumentFromMemory();
     }
 
     void SetDropDownOptions()
@@ -114,10 +113,7 @@ public class Instrument : MonoBehaviour
     {
         int count = SongChoreographer.instance.SectionCounter;
         InstrumentPlayingStyle inst = InstrumentInEachSection[count];
-        if(inst == InstrumentPlayingStyle.None)
-        {
-            return;
-        }
+
         for(int i = 0; i < InstrumentStylesForDropdownMenu.Count; i++)
         {
             if(inst == InstrumentStylesForDropdownMenu[i])
@@ -133,15 +129,15 @@ public class Instrument : MonoBehaviour
 
     public void PlayInstrumentAtStartOfBar()
     {
-        if (m_InstrumentIsActive)
+        if (InstrumentStylesForDropdownMenu[m_Dropdown.value] != InstrumentPlayingStyle.None)
         {
             if (!LastsWholeSection)
             {
                 if (ChordFollowingInstrument)
                 {
-                    if (timingController.g_CurrentChord != ChordType.INVALID)
+                    if (TimingController.instance.g_CurrentChord != ChordType.INVALID)
                     {
-                        string FMODEvent = $"event:/{m_InstrumentType}/{timingController.g_CurrentChord}{InstrumentStylesForDropdownMenu[m_Dropdown.value]}";
+                        string FMODEvent = $"event:/{m_InstrumentType}/{TimingController.instance.g_CurrentChord}{InstrumentStylesForDropdownMenu[m_Dropdown.value]}";
                         Debug.Log(FMODEvent);
                         FMODUnity.RuntimeManager.PlayOneShot(FMODEvent);
                     }
@@ -158,7 +154,7 @@ public class Instrument : MonoBehaviour
 
     public void PlayWholeSectionInstrument()
     {
-        if (m_InstrumentIsActive && LastsWholeSection)
+        if (InstrumentStylesForDropdownMenu[m_Dropdown.value] != InstrumentPlayingStyle.None && LastsWholeSection)
         {
             string FMODEvent = $"event:/{m_InstrumentType}/{InstrumentStylesForDropdownMenu[m_Dropdown.value]}";
             AudioSource.Event = FMODEvent;

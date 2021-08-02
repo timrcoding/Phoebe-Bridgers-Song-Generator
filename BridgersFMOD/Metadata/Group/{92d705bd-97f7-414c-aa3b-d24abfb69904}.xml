@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{92d705bd-97f7-414c-aa3b-d24abfb69904}">
+		<property name="volume">
+			<value>-6</value>
+		</property>
+		<property name="name">
+			<value>Electric Guitar</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{3124847c-a1d1-475a-aeb6-494ab20d9922}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{960ec972-794f-42a9-b68e-b58b71c4aa08}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{5d7932e6-d7ed-4691-9b19-7e9eb15b5195}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{3124847c-a1d1-475a-aeb6-494ab20d9922}">
+		<relationship name="effects">
+			<destination>{2ff8e2b5-0488-4892-b190-a0514523b59e}</destination>
+			<destination>{2db0060d-6c1b-4d1d-bda3-2e8b0e9987a7}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{960ec972-794f-42a9-b68e-b58b71c4aa08}" />
+	<object class="MixerBusFader" id="{2ff8e2b5-0488-4892-b190-a0514523b59e}" />
+	<object class="DelayEffect" id="{2db0060d-6c1b-4d1d-bda3-2e8b0e9987a7}">
+		<property name="delay">
+			<value>380</value>
+		</property>
+		<property name="feedback">
+			<value>58.5</value>
+		</property>
+		<property name="level">
+			<value>-9</value>
+		</property>
+	</object>
+</objects>

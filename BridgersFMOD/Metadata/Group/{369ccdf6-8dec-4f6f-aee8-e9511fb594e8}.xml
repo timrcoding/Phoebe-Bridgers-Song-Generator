@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{369ccdf6-8dec-4f6f-aee8-e9511fb594e8}">
+		<property name="volume">
+			<value>-9.5</value>
+		</property>
+		<property name="name">
+			<value>Radio</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{73e40eac-1ed0-492e-b88e-550bf09c4fe5}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{d3a6fef5-9dc5-4923-a957-3cb61b7671fb}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{5d7932e6-d7ed-4691-9b19-7e9eb15b5195}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{73e40eac-1ed0-492e-b88e-550bf09c4fe5}">
+		<relationship name="effects">
+			<destination>{4463eaed-bcf4-4b4b-8a8d-4b0e2a34aacd}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{d3a6fef5-9dc5-4923-a957-3cb61b7671fb}">
+		<property name="stereoPan">
+			<value>-80</value>
+		</property>
+	</object>
+	<object class="MixerBusFader" id="{4463eaed-bcf4-4b4b-8a8d-4b0e2a34aacd}" />
+</objects>

@@ -23,7 +23,11 @@
 			<destination>{a0ae366b-a568-44bd-81d8-c3704a8ed688}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{69828c89-21c2-457a-843c-49800a594a81}" />
+	<object class="MixerBusPanner" id="{69828c89-21c2-457a-843c-49800a594a81}">
+		<property name="stereoPan">
+			<value>-36</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{5fee8299-897f-4de6-8385-f6929df2c602}" />
 	<object class="MixerSend" id="{a0ae366b-a568-44bd-81d8-c3704a8ed688}">
 		<property name="level">

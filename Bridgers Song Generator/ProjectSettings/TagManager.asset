@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SectionTokenParent
   - Dropdown
+  - Canvas
   layers:
   - Default
   - TransparentFX

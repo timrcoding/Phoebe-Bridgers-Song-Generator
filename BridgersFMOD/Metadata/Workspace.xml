@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
 	<object class="Workspace" id="{f29eb1e1-b8b3-454c-94d9-b071ab7105f6}">
+		<property name="builtBanksOutputDirectory">
+			<value>../Bridgers Song Generator/FMODAssets</value>
+		</property>
 		<relationship name="masterEventFolder">
 			<destination>{5488e69c-21ce-4e64-a729-41958c24daa7}</destination>
 		</relationship>

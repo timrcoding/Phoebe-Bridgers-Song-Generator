@@ -63,6 +63,10 @@ public class TimingController : Controller
             UnityAudioSource.Stop();
             clockStarted = false;
         }
+        else
+        {
+            SongChoreographer.instance.SetSongSectionCounter(0);
+        }
     }
     IEnumerator ClockCoroutine()
     {

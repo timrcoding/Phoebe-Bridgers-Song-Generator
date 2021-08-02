@@ -19,6 +19,7 @@ public class AuditionButton : MonoBehaviour
     private float DragCooldown;
     [SerializeField] TMP_Dropdown dropdownOver;
     [SerializeField] List<GameObject> ListOfDropdowns;
+    private Vector3 dragOffset;
     void Start()
     {
         OriginalPosition = transform.localPosition;
@@ -38,11 +39,10 @@ public class AuditionButton : MonoBehaviour
 
         if (CanMove && DragCooldown > 0)
         {
-            float adjustedMouseX = Input.mousePosition.x - 960 ;
-            float adjustedMouseY = Input.mousePosition.y - 540;
-            transform.localPosition = new Vector2(adjustedMouseX, adjustedMouseY);
-            sortDropDowns(transform.position);
-            
+            var screenPoint = (Vector3)Input.mousePosition;
+            screenPoint.z = 10.0f; //distance of the plane from the camera
+            transform.position = returnCameraPoint(Input.mousePosition) + dragOffset;
+            sortDropDowns(transform.position);            
         }
         else
         {
@@ -50,10 +50,18 @@ public class AuditionButton : MonoBehaviour
         }
     }
 
+    Vector3 returnCameraPoint(Vector3 InputVector)
+    {
+        var screenPoint = InputVector;
+        screenPoint.z = 10.0f;
+        return Camera.main.ScreenToWorldPoint(screenPoint);
+    }
+
     public void StartDrag()
     {
         CanMove = true;
-        DragCooldown = -1;
+        DragCooldown = -.5f;
+        dragOffset = transform.position - returnCameraPoint(Input.mousePosition);
     }
 
     void setEvent()
@@ -109,25 +117,15 @@ public class AuditionButton : MonoBehaviour
 
     void sortDropDowns(Vector3 pos)
     {
-        ListOfDropdowns = ListOfDropdowns.OrderBy(ctx => Vector2.Distance( pos, ctx.transform.position)).ToList();
-        setDropdownColor(ListOfDropdowns[0]);
-    }
-
-   /* private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.tag == "Dropdown")
-        {
-            dropdownOver = other.GetComponent<TMP_Dropdown>();
-            setDropdownColor();
+        ListOfDropdowns = ListOfDropdowns.OrderBy(ctx => Vector2.Distance(pos, ctx.transform.position)).ToList();
+        if (Vector2.Distance(pos, ListOfDropdowns[0].transform.position) < 1){
+            setDropdownColor(ListOfDropdowns[0]);
         }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.tag == "Dropdown")
+        else
         {
-            dropdownOver.gameObject.GetComponent<Image>().color = Color.white;
+            setDropdownColor(null);
             dropdownOver = null;
         }
-    }*/
+    }
+
 }

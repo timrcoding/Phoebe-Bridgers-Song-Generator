@@ -21,9 +21,9 @@ public class SectionChoiceButton : MonoBehaviour
         button = GetComponent<Button>();
         songChoreographer = FindObjectOfType<SongChoreographer>();
         //BIND EVENTS
-        songChoreographer.SongNoSections += MakeInteractable;
-        songChoreographer.SongStopped += MakeInteractable;
-        songChoreographer.SongPlaying += MakeNonInteractable;
+        SongChoreographer.instance.SongNoSections += MakeInteractable;
+        SongChoreographer.instance.SongStopped += MakeInteractable;
+        SongChoreographer.instance.SongPlaying += MakeNonInteractable;
         m_SectionSelection.Hover += RevealButton;
     }
 
@@ -47,6 +47,8 @@ public class SectionChoiceButton : MonoBehaviour
     {
         songChoreographer.AddSongSection(m_SongSection);
     }
+
+    
 
     void MakeNonInteractable() => button.interactable = false;
 
