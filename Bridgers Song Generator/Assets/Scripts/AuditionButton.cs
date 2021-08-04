@@ -10,6 +10,7 @@ public class AuditionButton : MonoBehaviour
 {
     private Vector3 OriginalPosition;
     [SerializeField] private Button button;
+    [SerializeField] private Animator anim;
     [SerializeField] private InstrumentType instrumentType;
     [SerializeField] private InstrumentPlayingStyle playingStyle;
     [SerializeField] private ChordType ChordType;
@@ -48,6 +49,11 @@ public class AuditionButton : MonoBehaviour
         {
             transform.localPosition = OriginalPosition;
         }
+    }
+
+    public void AnimateButton()
+    {
+        anim.Play("AuditionButtonWiggle", -1, 0);
     }
 
     Vector3 returnCameraPoint(Vector3 InputVector)

@@ -46,6 +46,7 @@ public class SongChoreographer : Controller
     public event Action SongPlaying;
     public event Action SongCounterChanged;
     public event Action SectionAdded;
+    public event Action SectionRemoved;
     public event Action SetupCopyElement;
 
     //SONG SEQUENCE AREA
@@ -63,9 +64,7 @@ public class SongChoreographer : Controller
     [SerializeField] private List<Instrument> Instruments;
 
     //COPYING
-    [SerializeField] int indexToCopy;
-    [SerializeField] int indexCopiedTo;
-    [SerializeField] bool readyToCopy;
+    public int sectionRemoved;
 
     private void Awake()
     {
@@ -138,17 +137,27 @@ public class SongChoreographer : Controller
     {
         if (m_SongSections.Count < m_SongSectionPositionalNodes.Count)
         {
-            m_SongSections.Add(new SongSection(songSectionName, m_SongSections.Count));
+            SongSection newSongSection = new SongSection(songSectionName, m_SongSections.Count);
+
+            foreach(SongSection section in m_SongSections)
+            {
+                if(section.m_SongSectionName == songSectionName)
+                {
+                    newSongSection.m_SongChords = section.m_SongChords;
+                }
+            }
+
+            m_SongSections.Add(newSongSection);
             m_SongSections[m_SongSections.Count - 1].SectionToken.GetComponent<SectionToken>().SelectButton();
         }
         SectionAdded();
         SetSongState(SongState.STOPPED);
-        
     }
+
     public void IncrementSectionCounter()
     {
         int num = new int();
-        if(SectionCounter < m_SongSections.Count-1)
+        if (SectionCounter < m_SongSections.Count - 1)
         {
             num = SectionCounter;
             num++;
@@ -156,8 +165,14 @@ public class SongChoreographer : Controller
         }
         else
         {
-            //TimingController.instance.StopClock();
-            SetSongSectionCounter(0);
+            if (m_SongSections[SectionCounter].m_SongSectionName == SongSectionName.OUTRO)
+            {
+                TimingController.instance.StopClock();
+            }
+            else
+            {
+                SetSongSectionCounter(0);
+            }
         }
     }
     public void SetSongSectionCounter(int i)
@@ -204,12 +219,12 @@ public class SongChoreographer : Controller
 
     public void RemoveFromSongSectionList(int i)
     {
-        Debug.Log(i);
+        sectionRemoved = i;
+
         if (m_SongSections.Count > 1)
         {
             Destroy(m_SongSections[i].SectionToken);
-            m_SongSections.RemoveAt(i);
-            UpdateAllSongSectionIndexes();
+            m_SongSections.RemoveAt(i); 
             SetSongSectionCounter(0);
         }
         else
@@ -219,6 +234,8 @@ public class SongChoreographer : Controller
             SetSongSectionCounter(0);
             SetSongState(SongState.NOSECTIONS);
         }
+        SectionRemoved();
+        UpdateAllSongSectionIndexes();
     }
 
     void UpdateAllSongSectionIndexes()
@@ -228,34 +245,6 @@ public class SongChoreographer : Controller
             m_SongSections[i].UpdateIndexes(i);
         }
     }
-
-    public void setupCopy(int index)
-    {
-        
-        if (!readyToCopy)
-        {
-            readyToCopy = true;
-            indexToCopy = index;
-        }
-        else
-        {
-            
-            readyToCopy = false;
-            copyChords();
-            Debug.Log("CHORDS COPIED");
-            
-        }
-    }
-
-    public void copyChords()
-    {
-        SongSection SectionCopy = m_SongSections[indexToCopy];
-        SongSection SectionReceived = m_SongSections[indexCopiedTo];
-
-        SectionReceived.m_SongChords = SectionCopy.m_SongChords;
-        
-            ReadSongSectionToDropdowns();
-        }
 
     }
 
@@ -296,4 +285,6 @@ public class SongChoreographer : Controller
         Vector3 TokenPosition = SectionToken.transform.localPosition;
         SectionToken.transform.localPosition = Vector2.Lerp(TokenPosition, TargetTransform.localPosition, .25f);
     }
+
+    
 }

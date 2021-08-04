@@ -379,6 +379,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3216
+--- !u!114 &-8145146009451895034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOCALS/VocalsThreeBar
+  m_EditorClassIdentifier: 
+  Path: event:/VOCALS/VocalsThreeBar
+  guid: cbdd36b60977734eb47283c06c4347dd
+  Banks:
+  - {fileID: -4054977999362079183}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 12800
 --- !u!114 &-8071389357325444963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2051,7 +2074,7 @@ MonoBehaviour:
   Path: FMODAssets/Desktop/Instruments.bank
   Name: Instruments
   StudioPath: bank:/Instruments
-  lastModified: 637635010789842136
+  lastModified: 637635974343285890
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -3078,6 +3101,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3166
+--- !u!114 &-2052642607990772226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOCALS/Vocals
+  m_EditorClassIdentifier: 
+  Path: event:/VOCALS/Vocals
+  guid: 417f891543d8ba4bbcd315f6dc5c709c
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3200
 --- !u!114 &-2015699478507006505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4362,12 +4407,15 @@ MonoBehaviour:
   - {fileID: -2414605280374830243}
   - {fileID: -4317052960703065716}
   - {fileID: 3008661820309118217}
+  - {fileID: 2776357088349526760}
+  - {fileID: 2175975935719276433}
+  - {fileID: 9084636940105035296}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4054977999362079183}
   StringsBanks:
   - {fileID: 879168869272436084}
-  stringsBankWriteTime: 637635010789872793
+  stringsBankWriteTime: 637635974343305834
   cacheVersion: 6
 --- !u!114 &78738742197792906
 MonoBehaviour:
@@ -4747,11 +4795,11 @@ MonoBehaviour:
   Path: FMODAssets/Desktop/Instruments.strings.bank
   Name: Instruments.strings
   StudioPath: bank:/Instruments.strings
-  lastModified: 637635010789872793
+  lastModified: 637635974343305834
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 4836
+    Value: 5144
   Exists: 1
 --- !u!114 &906793255643540724
 MonoBehaviour:
@@ -5322,6 +5370,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3216
+--- !u!114 &2175975935719276433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOCALS/VocalsTwoBar
+  m_EditorClassIdentifier: 
+  Path: event:/VOCALS/VocalsTwoBar
+  guid: 6bd298b74330c949a0308625f6d414b9
+  Banks:
+  - {fileID: -4054977999362079183}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 6400
 --- !u!114 &2274934966234205145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5568,6 +5639,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3216
+--- !u!114 &2776357088349526760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOCALS/VocalsOneBar
+  m_EditorClassIdentifier: 
+  Path: event:/VOCALS/VocalsOneBar
+  guid: 417f891543d8ba4bbcd315f6dc5c709c
+  Banks:
+  - {fileID: -4054977999362079183}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3200
 --- !u!114 &2782567773585372319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8400,6 +8494,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3216
+--- !u!114 &9084636940105035296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOCALS/VocalsFourBar
+  m_EditorClassIdentifier: 
+  Path: event:/VOCALS/VocalsFourBar
+  guid: cbdd36b60977734eb47283c06c4347dd
+  Banks:
+  - {fileID: -4054977999362079183}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 12800
 --- !u!114 &9125513971808919132
 MonoBehaviour:
   m_ObjectHideFlags: 0

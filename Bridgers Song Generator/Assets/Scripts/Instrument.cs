@@ -68,6 +68,7 @@ public class Instrument : MonoBehaviour
         SongChoreographer.instance.SongStopped += StopEmitter;
         SongChoreographer.instance.SongCounterChanged += ReadInstrumentFromMemory;
         SongChoreographer.instance.SectionAdded += WritePreviousInstrumentToMemory;
+        SongChoreographer.instance.SectionRemoved+= SwitchInstruments;
         ReadInstrumentFromMemory();
     }
 
@@ -121,6 +122,23 @@ public class Instrument : MonoBehaviour
                 m_Dropdown.value = i;
             }
         }
+    }
+
+    public void SwitchInstruments()
+    {
+        int i = SongChoreographer.instance.sectionRemoved;
+
+        if (i < InstrumentStylesForDropdownMenu.Count)
+        {
+            InstrumentInEachSection[i] = InstrumentInEachSection[i + 1];
+        }
+
+        for(int j = SongChoreographer.instance.m_SongSections.Count; j < InstrumentStylesForDropdownMenu.Count; j++)
+        {
+            InstrumentInEachSection[j] = InstrumentPlayingStyle.Invalid;
+        }
+        Debug.Log("SWITCHED");
+        ReadInstrumentFromMemory();
     }
 
     void MakeNonInteractable() => m_Dropdown.interactable = false;

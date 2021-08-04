@@ -19,6 +19,7 @@ public class TimingController : Controller
     public event Action OnSongStart;
     public event Action OnNewSectionBegin;
     public event Action IncrementSection;
+    public event Action TriggerVocal;
 
     [SerializeField] private ChordType CurrentChord;
 
@@ -75,7 +76,7 @@ public class TimingController : Controller
             clockStarted = !clockStarted;
             CurrentChord = SongChoreographer.instance.m_SongSections[SongChoreographer.instance.SectionCounter].m_SongChords[BarCount];
             OnSongBarBegin();
-
+            TriggerVocal();
             if (!UnityAudioSource.isPlaying)
             {
                 UnityAudioSource.Play();

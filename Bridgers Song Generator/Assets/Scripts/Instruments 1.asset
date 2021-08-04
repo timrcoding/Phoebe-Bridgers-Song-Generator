@@ -16,7 +16,7 @@ MonoBehaviour:
   - m_InstrumentType: 1
     m_ChordToFMODString:
     - SongChord: 1
-      FMODLookup: 
+      FMODLookup: event:/VOCALS/Vocals
     - SongChord: 2
       FMODLookup: 
     - SongChord: 3

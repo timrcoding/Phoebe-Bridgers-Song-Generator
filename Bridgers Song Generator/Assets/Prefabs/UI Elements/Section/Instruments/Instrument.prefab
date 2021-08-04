@@ -1343,7 +1343,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2475941442891521006}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.6666667
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1501,7 +1501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InstrumentType: 1
   InstrumentStylesForDropdownMenu: 
-  InstrumentInEachSection: 00000000000000000000000000000000000000000000000000000000
+  InstrumentInEachSection: 
   AudioSource: {fileID: 244128583234510761}
   m_Dropdown: {fileID: 2475941441706214535}
   m_Toggle: {fileID: 5908786188923539042}
