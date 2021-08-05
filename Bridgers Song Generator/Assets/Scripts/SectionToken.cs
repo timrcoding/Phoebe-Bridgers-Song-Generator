@@ -9,7 +9,6 @@ public class SectionToken : MonoBehaviour
     [SerializeField] private TextMeshProUGUI SectionTokenText;
     [SerializeField] private int SongIndexPosition;
     [SerializeField] private Button DestroyButton;
-    [SerializeField] private Button CopyButton;
     private Button button;
 
     private void Awake()
@@ -20,15 +19,21 @@ public class SectionToken : MonoBehaviour
         SongChoreographer.instance.SongPlaying += MakeNonInteractable;
         SongChoreographer.instance.SwitchIndexesElement += updateIndex;
     }
-    
+
     public void MoveSectionRight()
     {
-        SongChoreographer.instance.moveSectionRight(SongIndexPosition);
+        if (button != null)
+        {
+            SongChoreographer.instance.moveSectionRight(SongIndexPosition);
+        }
     }
 
     public void MoveSectionLeft()
     {
-        SongChoreographer.instance.moveSectionLeft(SongIndexPosition);
+        if (button != null)
+        {
+            SongChoreographer.instance.moveSectionLeft(SongIndexPosition);
+        }
     }
 
     public void updateIndex()
@@ -36,7 +41,7 @@ public class SectionToken : MonoBehaviour
         List<SongSection> lst = SongChoreographer.instance.m_SongSections;
         for (int i = 0; i < lst.Count; i++)
         {
-            if(lst[i].SectionToken == gameObject)
+            if(lst[i].SectionToken == gameObject && lst[i].SectionToken != null)
             {
                 SongIndexPosition = i;
                 break;
@@ -50,9 +55,21 @@ public class SectionToken : MonoBehaviour
         SongIndexPosition = songIndexPosition;
     }
 
-    void MakeNonInteractable() => button.interactable = false;
+    void MakeNonInteractable()
+    {
+        if (button != null)
+        {
+            button.interactable = false;
+        }
+    }
 
-    void MakeInteractable() => button.interactable = true;
+    void MakeInteractable()
+    {
+        if (button != null)
+        {
+            button.interactable = true;
+        }
+    }
 
     public void SetSongSectionCounter()
     {
@@ -61,16 +78,21 @@ public class SectionToken : MonoBehaviour
 
     public void SelectButton()
     {
-        SongState songState = SongChoreographer.instance.m_SongState;
-        if (songState == SongState.STOPPED || songState == SongState.NOSECTIONS)
+        if (button != null)
         {
-            button.Select();
-            button.onClick.Invoke();
+            SongState songState = SongChoreographer.instance.m_SongState;
+            if (songState == SongState.STOPPED || songState == SongState.NOSECTIONS)
+            {
+                button.Select();
+                button.onClick.Invoke();
+            }
         }
         
     }
     public void RemoveFromSongSectionList()
     {
         SongChoreographer.instance.RemoveFromSongSectionList(SongIndexPosition);
+        MakeNonInteractable();
+        transform.SetParent(null);
     }
 }

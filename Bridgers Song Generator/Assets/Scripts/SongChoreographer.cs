@@ -50,6 +50,8 @@ public class SongChoreographer : Controller
     public event Action SectionRemoved;
     public event Action SetupCopyElement;
     public event Action SwitchIndexesElement;
+    public event Action SwitchInstrumentsRight;
+    public event Action SwitchInstrumentsLeft;
 
     //SONG SEQUENCE AREA
     [SerializeField] private List<Transform> m_SongSectionPositionalNodes;
@@ -220,9 +222,11 @@ public class SongChoreographer : Controller
             SongSection tmp = m_SongSections[i];
             m_SongSections[i] = m_SongSections[i + 1];
             m_SongSections[i + 1] = tmp;
+            SetSongSectionCounter(i);
+            SwitchIndexesElement();
+            SwitchInstrumentsRight();
         }
-        SetSongSectionCounter(i);
-        SwitchIndexesElement();
+        
     }
 
     public void moveSectionLeft(int i)
@@ -232,9 +236,11 @@ public class SongChoreographer : Controller
             SongSection tmp = m_SongSections[i];
             m_SongSections[i] = m_SongSections[i -1];
             m_SongSections[i -1] = tmp;
+            SetSongSectionCounter(i);
+            SwitchIndexesElement();
+            SwitchInstrumentsLeft();
         }
-        SetSongSectionCounter(i);
-        SwitchIndexesElement();
+        
     }
 
     public void WriteToSongSection()
@@ -267,13 +273,13 @@ public class SongChoreographer : Controller
 
         if (m_SongSections.Count > 1)
         {
-            Destroy(m_SongSections[i].SectionToken);
+           // Destroy(m_SongSections[i].SectionToken);
             m_SongSections.RemoveAt(i); 
             SetSongSectionCounter(0);
         }
         else
         {
-            Destroy(m_SongSections[i].SectionToken);
+           // Destroy(m_SongSections[i].SectionToken);
             m_SongSections.Clear();
             SetSongSectionCounter(0);
             SetSongState(SongState.NOSECTIONS);

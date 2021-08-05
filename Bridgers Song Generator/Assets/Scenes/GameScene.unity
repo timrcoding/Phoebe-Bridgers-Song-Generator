@@ -182,7 +182,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 483.5, y: 229.7}
+  m_AnchoredPosition: {x: 560, y: 286}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &313655131
@@ -292,6 +292,7 @@ GameObject:
   - component: {fileID: 341788043}
   - component: {fileID: 341788044}
   - component: {fileID: 341788045}
+  - component: {fileID: 341788046}
   m_Layer: 0
   m_Name: ==GAME MANAGER==
   m_TagString: Untagged
@@ -497,6 +498,26 @@ MonoBehaviour:
   ButtonSprites:
   - {fileID: 21300000, guid: b2536bbd62657634888908ee758c40a1, type: 3}
   - {fileID: 21300000, guid: 06eac9f36605d5a40b86535e05fd59a3, type: 3}
+--- !u!114 &341788046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341788040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4626ed1e6ed04e243a07eb48e1dd1a82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChordColors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 0.96832883, b: 0.7783019, a: 1}
+  - {r: 0.9012671, g: 1, b: 0.8349056, a: 1}
+  - {r: 1, g: 0.8726415, b: 0.8746009, a: 1}
+  - {r: 1, g: 0.8349056, b: 0.9244483, a: 1}
+  - {r: 0.7688679, g: 0.8637972, b: 1, a: 1}
+  - {r: 0.740566, g: 0.9584865, b: 1, a: 1}
 --- !u!850595691 &428948324
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -945,11 +966,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "PHOEBE BRIDGERS SONG GENERATOR\nMake the sleepy indie hits of your dreams.\n\nYou
-    may...\nAudition, then drag and drop chords onto the chord sequence.\nChoose
-    your instruments, switchable by song section.\nCreate song structures using 'Select
-    Section'.\nSit back and press play.\n\nYou can set different instruments for
-    each section. \nHave fun!"
+  m_text: "PHOEBE BRIDGERS SONG CRAFTER\n\nCreate the  indie hit of your dreams.\n\nYou
+    can do the following.\n1. Select which sections you would like in your song from
+    'Select Section' button. \n    Rearrange or remove these using the buttons on
+    each one.\n2. Choose chords for each bar using either drag and drop or dropdown
+    menu.\n3. Choose your instruments using the instruments sections.\n4. Toggle
+    on or off Phantom Phoebe to sing along (or not).\n\nYou may have sections with
+    entirely different instrumentation as suits you.\n\nSit back and press play.
+    Press the glasses to hide the interface.\n\nAll your changes refresh at the start
+    of each new session."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a84b144fde61ce447b894fa4f672268a, type: 2}
   m_sharedMaterial: {fileID: -4669913999957358818, guid: a84b144fde61ce447b894fa4f672268a,
@@ -977,10 +1002,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 31.75
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1013,7 +1038,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 99.10889, w: 28.831696}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1467,7 +1492,97 @@ PrefabInstance:
     - target: {fileID: 280864461025854974, guid: 26ebf8bfc96950947bdab49f460f4e2d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00002670288
+      value: 0.000022888184
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836896123940788996, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836896123940788996, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.7430646
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836896123940788996, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.5613208
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836896124608307949, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.98882246
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836896124608307949, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836896124608307949, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.7028302
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836896125434192866, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.5990566
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836896125434192866, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836896125434192866, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.760632
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836896125953400741, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.7311321
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836896125953400741, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.7311321
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836896125953400741, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836896125956630209, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.89228064
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836896125956630209, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.7688679
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836896125956630209, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6660574878298274756, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 6660574878439915818, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 773
+      objectReference: {fileID: 0}
+    - target: {fileID: 6660574878439915818, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -502
       objectReference: {fileID: 0}
     - target: {fileID: 6660574879034669723, guid: 26ebf8bfc96950947bdab49f460f4e2d,
         type: 3}
@@ -1523,6 +1638,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6660574879913143972, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9517552
+      objectReference: {fileID: 0}
+    - target: {fileID: 6660574879913143972, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.3068584
+      objectReference: {fileID: 0}
+    - target: {fileID: 6660574879913143972, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1874.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6660574879913143972, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -604.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6660574879913143972, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -35.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 6660574880081967942, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6660574880081967943, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.2028302
+      objectReference: {fileID: 0}
+    - target: {fileID: 6660574880081967943, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.88785434
+      objectReference: {fileID: 0}
+    - target: {fileID: 6660574880081967943, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6660574880213426126, guid: 26ebf8bfc96950947bdab49f460f4e2d,
         type: 3}
@@ -1642,12 +1802,12 @@ PrefabInstance:
     - target: {fileID: 9093702299629067134, guid: 26ebf8bfc96950947bdab49f460f4e2d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00002670288
+      value: 0.000022888184
       objectReference: {fileID: 0}
     - target: {fileID: 9093702299671299945, guid: 26ebf8bfc96950947bdab49f460f4e2d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00002670288
+      value: 0.000022888184
       objectReference: {fileID: 0}
     - target: {fileID: 9093702299772387219, guid: 26ebf8bfc96950947bdab49f460f4e2d,
         type: 3}
@@ -1674,10 +1834,25 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9093702299984213708, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 9093702300218533909, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000061035156
+      objectReference: {fileID: 0}
     - target: {fileID: 9093702300491418343, guid: 26ebf8bfc96950947bdab49f460f4e2d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00002670288
+      value: 0.000022888184
+      objectReference: {fileID: 0}
+    - target: {fileID: 9093702300568439266, guid: 26ebf8bfc96950947bdab49f460f4e2d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000061035156
       objectReference: {fileID: 0}
     - target: {fileID: 9093702300770453693, guid: 26ebf8bfc96950947bdab49f460f4e2d,
         type: 3}

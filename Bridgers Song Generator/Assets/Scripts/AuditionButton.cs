@@ -11,9 +11,11 @@ public class AuditionButton : MonoBehaviour
     private Vector3 OriginalPosition;
     [SerializeField] private Button button;
     [SerializeField] private Animator anim;
+    [SerializeField] private Image ButtonImage;
     [SerializeField] private InstrumentType instrumentType;
     [SerializeField] private InstrumentPlayingStyle playingStyle;
     [SerializeField] private ChordType ChordType;
+    [SerializeField] private Color ChordColor;
     [FMODUnity.EventRef]
     [SerializeField] string evRef;
     private bool CanMove;
@@ -27,6 +29,14 @@ public class AuditionButton : MonoBehaviour
         gameObject.name = ChordType.ToString();
         setEvent();
         FindDropdowns();
+        StartCoroutine(SetColorValue());
+    }
+
+    IEnumerator SetColorValue()
+    {
+        yield return new WaitForSeconds(Time.deltaTime);
+        ButtonImage.color = MiscResources.instance.ChordColors[(int) ChordType];
+        ChordColor = MiscResources.instance.ChordColors[(int)ChordType];
     }
 
     public void PlayChord()
@@ -68,6 +78,7 @@ public class AuditionButton : MonoBehaviour
         CanMove = true;
         DragCooldown = -.1f;
         dragOffset = transform.position - returnCameraPoint(Input.mousePosition);
+        PlayChord();
     }
 
     void setEvent()
@@ -99,12 +110,12 @@ public class AuditionButton : MonoBehaviour
                 {
                     
                     dropdownOver = ListOfDropdowns[0].GetComponent<TMP_Dropdown>();
-                    g.GetComponent<Image>().color = Color.yellow;
+                    g.GetComponent<Image>().color = ButtonImage.color;
                     dropdownOver = g.GetComponent<TMP_Dropdown>();
                 }
                 else
                 {
-                    g.GetComponent<Image>().color = Color.white;
+                    g.GetComponent<Image>().color = MiscResources.instance.ChordColors[g.GetComponent<TMP_Dropdown>().value];
                 }
             }
         }

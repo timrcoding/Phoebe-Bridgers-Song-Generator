@@ -429,6 +429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c153ff098ccfafb4f8f752ea4e5ec97a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DropDownImage: {fileID: 4887572434135618281}
 --- !u!61 &7267624402152476558
 BoxCollider2D:
   m_ObjectHideFlags: 0
