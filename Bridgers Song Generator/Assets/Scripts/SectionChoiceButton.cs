@@ -34,8 +34,11 @@ public class SectionChoiceButton : MonoBehaviour
 
     void RevealButton()
     {
-        TargetPosition = OriginalPosition;
-        StartCoroutine(ConcealButton());
+        if (SongChoreographer.instance.m_SongState != SongState.PLAYING)
+        {
+            TargetPosition = OriginalPosition;
+            StartCoroutine(ConcealButton());
+        }
     }
 
     IEnumerator ConcealButton()

@@ -106,7 +106,10 @@ public class Instrument : MonoBehaviour
         if (SongChoreographer.instance.m_SongState != SongState.NOSECTIONS)
         {
             int count = SongChoreographer.instance.SectionCounter;
-            InstrumentInEachSection[count] = InstrumentInEachSection[count - 1];
+            if (InstrumentInEachSection[count] == InstrumentPlayingStyle.Invalid)
+            {
+                InstrumentInEachSection[count] = InstrumentInEachSection[count - 1];
+            }
         }
     }
 
@@ -135,7 +138,7 @@ public class Instrument : MonoBehaviour
 
         for(int j = SongChoreographer.instance.m_SongSections.Count; j < InstrumentStylesForDropdownMenu.Count; j++)
         {
-            InstrumentInEachSection[j] = InstrumentPlayingStyle.Invalid;
+           // InstrumentInEachSection[j] = InstrumentPlayingStyle.Invalid;
         }
         Debug.Log("SWITCHED");
         ReadInstrumentFromMemory();
@@ -156,14 +159,12 @@ public class Instrument : MonoBehaviour
                     if (TimingController.instance.g_CurrentChord != ChordType.INVALID)
                     {
                         string FMODEvent = $"event:/{m_InstrumentType}/{TimingController.instance.g_CurrentChord}{InstrumentStylesForDropdownMenu[m_Dropdown.value]}";
-                        Debug.Log(FMODEvent);
                         FMODUnity.RuntimeManager.PlayOneShot(FMODEvent);
                     }
                 }
                 else
                 {
                     string FMODEvent = $"event:/{m_InstrumentType}/{InstrumentStylesForDropdownMenu[m_Dropdown.value]}";
-                    Debug.Log(FMODEvent);
                     FMODUnity.RuntimeManager.PlayOneShot(FMODEvent);
                 }
             }

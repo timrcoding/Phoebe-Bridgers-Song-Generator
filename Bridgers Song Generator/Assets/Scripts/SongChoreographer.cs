@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 public enum ChordType
 {
@@ -48,6 +49,7 @@ public class SongChoreographer : Controller
     public event Action SectionAdded;
     public event Action SectionRemoved;
     public event Action SetupCopyElement;
+    public event Action SwitchIndexesElement;
 
     //SONG SEQUENCE AREA
     [SerializeField] private List<Transform> m_SongSectionPositionalNodes;
@@ -81,12 +83,14 @@ public class SongChoreographer : Controller
         yield return new WaitForEndOfFrame();
         SetSongSectionCounter(0);
         TimingController.instance.OnNewSectionBegin += IncrementSectionCounter;
-        AddSongSection(SongSectionName.INTRO);
+       
+        
         SetFirstSectionOnLoad();
     }
 
     void SetFirstSectionOnLoad()
     {
+        AddSongSection(SongSectionName.VERSE);
         SongSection Section = m_SongSections[0];
         Section.m_SongChords[0] = ChordType.ChordOne;
         Section.m_SongChords[1] = ChordType.ChordThree;
@@ -97,7 +101,20 @@ public class SongChoreographer : Controller
         Section.m_SongChords[6] = ChordType.ChordFour;
         Section.m_SongChords[7] = ChordType.ChordFive;
         ReadSongSectionToDropdowns();
-        Debug.Log("CHORDS SET");
+
+        AddSongSection(SongSectionName.CHORUS);
+        Section = m_SongSections[1];
+        Section.m_SongChords[0] = ChordType.ChordOne;
+        Section.m_SongChords[1] = ChordType.ChordThree;
+        Section.m_SongChords[2] = ChordType.ChordSix;
+        Section.m_SongChords[3] = ChordType.ChordTwo;
+        Section.m_SongChords[4] = ChordType.ChordOne;
+        Section.m_SongChords[5] = ChordType.ChordSix;
+        Section.m_SongChords[6] = ChordType.ChordFour;
+        Section.m_SongChords[7] = ChordType.ChordFive;
+
+        ReadSongSectionToDropdowns();
+        SetSongSectionCounter(0);
     }
 
     public void SetSongState(SongState songState)
@@ -135,6 +152,7 @@ public class SongChoreographer : Controller
 
     public void AddSongSection(SongSectionName songSectionName)
     {
+        
         if (m_SongSections.Count < m_SongSectionPositionalNodes.Count)
         {
             SongSection newSongSection = new SongSection(songSectionName, m_SongSections.Count);
@@ -149,9 +167,12 @@ public class SongChoreographer : Controller
 
             m_SongSections.Add(newSongSection);
             m_SongSections[m_SongSections.Count - 1].SectionToken.GetComponent<SectionToken>().SelectButton();
+            
         }
+        
         SectionAdded();
         SetSongState(SongState.STOPPED);
+
     }
 
     public void IncrementSectionCounter()
@@ -190,7 +211,30 @@ public class SongChoreographer : Controller
             SetSongState(SongState.NOSECTIONS);
         }
         SongCounterChanged();
-        Debug.Log($"SongSection: {SectionCounter}");
+    }
+
+    public void moveSectionRight(int i)
+    {
+        if(i+1 < m_SongSections.Count && m_SongState != SongState.PLAYING)
+        {
+            SongSection tmp = m_SongSections[i];
+            m_SongSections[i] = m_SongSections[i + 1];
+            m_SongSections[i + 1] = tmp;
+        }
+        SetSongSectionCounter(i);
+        SwitchIndexesElement();
+    }
+
+    public void moveSectionLeft(int i)
+    {
+        if(i-1 >= 0 && m_SongState != SongState.PLAYING)
+        {
+            SongSection tmp = m_SongSections[i];
+            m_SongSections[i] = m_SongSections[i -1];
+            m_SongSections[i -1] = tmp;
+        }
+        SetSongSectionCounter(i);
+        SwitchIndexesElement();
     }
 
     public void WriteToSongSection()

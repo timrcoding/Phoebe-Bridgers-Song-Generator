@@ -9,10 +9,12 @@ public class FMODLoader : MonoBehaviour
     void Start()
     {
         FMODUnity.RuntimeManager.LoadBank("Instruments");
-
-        StartCoroutine(ChangeScene(1));
     }
 
+    public void SceneChange()
+    {
+        StartCoroutine(ChangeScene(1));
+    }
 
     IEnumerator ChangeScene(int buildID)
     {

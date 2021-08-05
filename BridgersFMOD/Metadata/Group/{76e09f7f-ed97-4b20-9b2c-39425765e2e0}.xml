@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="MixerGroup" id="{76e09f7f-ed97-4b20-9b2c-39425765e2e0}">
 		<property name="volume">
-			<value>-15</value>
+			<value>-5</value>
 		</property>
 		<property name="name">
 			<value>Shimmer</value>
@@ -24,7 +24,7 @@
 	</object>
 	<object class="MixerBusPanner" id="{52c101ce-14c6-41d8-894b-8bbdabf0ae96}">
 		<property name="stereoPan">
-			<value>-50</value>
+			<value>-32</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{810691ab-0538-4958-87a1-b36424f275bf}" />

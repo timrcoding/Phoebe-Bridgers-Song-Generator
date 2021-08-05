@@ -40,8 +40,7 @@ public class TimingController : Controller
     public void StartClock()
     {
         if (SongChoreographer.instance.m_SongState == SongState.STOPPED)
-        {
-            Debug.Log("CLOCK STARTED");
+        { 
             StartCoroutine(ClockCoroutine());
             OnSongStart();
             SongChoreographer.instance.SetSongState(SongState.PLAYING);
@@ -56,7 +55,6 @@ public class TimingController : Controller
     {
         if (SongChoreographer.instance.m_SongState == SongState.PLAYING)
         {
-            Debug.Log("CLOCK STOPPED");
             StopAllCoroutines();
             BarCount = 0;
             BeatCounter = 0;

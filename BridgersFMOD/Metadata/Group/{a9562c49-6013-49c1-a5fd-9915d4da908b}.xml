@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="MixerGroup" id="{a9562c49-6013-49c1-a5fd-9915d4da908b}">
 		<property name="volume">
-			<value>3</value>
+			<value>5.5</value>
 		</property>
 		<property name="name">
 			<value>Arctic</value>
@@ -29,5 +29,9 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{1e732bcb-4ba7-454e-a1b0-59e7b64a50bc}" />
-	<object class="CompressorEffect" id="{774c779f-679f-453e-9470-177a7189f3f5}" />
+	<object class="CompressorEffect" id="{774c779f-679f-453e-9470-177a7189f3f5}">
+		<property name="gain">
+			<value>9.5</value>
+		</property>
+	</object>
 </objects>

@@ -2074,7 +2074,7 @@ MonoBehaviour:
   Path: FMODAssets/Desktop/Instruments.bank
   Name: Instruments
   StudioPath: bank:/Instruments
-  lastModified: 637635974343285890
+  lastModified: 637637525492245193
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -4410,12 +4410,13 @@ MonoBehaviour:
   - {fileID: 2776357088349526760}
   - {fileID: 2175975935719276433}
   - {fileID: 9084636940105035296}
+  - {fileID: 8764306348252699120}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4054977999362079183}
   StringsBanks:
   - {fileID: 879168869272436084}
-  stringsBankWriteTime: 637635974343305834
+  stringsBankWriteTime: 637637525492265133
   cacheVersion: 6
 --- !u!114 &78738742197792906
 MonoBehaviour:
@@ -4795,11 +4796,11 @@ MonoBehaviour:
   Path: FMODAssets/Desktop/Instruments.strings.bank
   Name: Instruments.strings
   StudioPath: bank:/Instruments.strings
-  lastModified: 637635974343305834
+  lastModified: 637637525492265133
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 5144
+    Value: 5248
   Exists: 1
 --- !u!114 &906793255643540724
 MonoBehaviour:
@@ -8339,6 +8340,50 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3216
+--- !u!114 &8764306348252699120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/AMBIENT/Intro
+  m_EditorClassIdentifier: 
+  Path: event:/AMBIENT/Intro
+  guid: 39351302eaa6304eafa3c7e5526184cd
+  Banks:
+  - {fileID: -4054977999362079183}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 8793049084212321398}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 25600
+--- !u!114 &8793049084212321398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Intro/Looping
+  m_EditorClassIdentifier: 
+  Name: Looping
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &8807392011269348687
 MonoBehaviour:
   m_ObjectHideFlags: 0

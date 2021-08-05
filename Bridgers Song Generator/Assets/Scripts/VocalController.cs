@@ -9,34 +9,40 @@ public class VocalController : MonoBehaviour
     [SerializeField] private ClipLength clipLength;
     [SerializeField] private List<bool> coolDownList;
     [SerializeField] private bool CanSing = true;
-    [SerializeField] private Image GhostButton;
+    [SerializeField] private bool[] CanSingEachSection = new bool[7];
+    [SerializeField] private Animator GhostAnimator;
     [SerializeField] private Sprite[] ButtonSprites;
 
     void Start()
     {
         TimingController.instance.TriggerVocal += SelectClipLength;
+        SongChoreographer.instance.SongCounterChanged += ReadEachSection;
     }
 
     public void setButton()
     {
         CanSing = !CanSing;
+        SetEachSection();
+    }
 
-        if (CanSing)
-        {
-            GhostButton.sprite = ButtonSprites[0];
-        }
-        else
-        {
-            GhostButton.sprite = ButtonSprites[1];
-        }
+    void ReadEachSection()
+    {
+        CanSing = CanSingEachSection[SongChoreographer.instance.SectionCounter];
+        GhostAnimator.SetBool("SwitchBlack", !CanSing);
+    }
+
+    public void SetEachSection()
+    {
+        CanSingEachSection[SongChoreographer.instance.SectionCounter] = CanSing;
+        ReadEachSection();
     }
     
 
     void SelectClipLength()
     {
-        if (CanSing)
+        if (CanSingEachSection[SongChoreographer.instance.SectionCounter])
         {
-            int rand = new int();
+            int rand;
 
             if (coolDownList.Count > 0)
             {
@@ -47,7 +53,7 @@ public class VocalController : MonoBehaviour
             {
                 if (TimingController.instance.BarCount == 0)
                 {
-                    rand = Random.Range(2, 4);
+                    rand = Random.Range(1, 4);
                     clipLength = (ClipLength)rand;
 
                 }
@@ -63,7 +69,6 @@ public class VocalController : MonoBehaviour
                 }
                 FMODUnity.RuntimeManager.PlayOneShot($"event:/VOCALS/Vocals{clipLength}");
                 setCoolDown();
-                Debug.Log(clipLength);
             }
         }
     }

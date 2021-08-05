@@ -66,7 +66,7 @@ public class AuditionButton : MonoBehaviour
     public void StartDrag()
     {
         CanMove = true;
-        DragCooldown = -.5f;
+        DragCooldown = -.1f;
         dragOffset = transform.position - returnCameraPoint(Input.mousePosition);
     }
 
