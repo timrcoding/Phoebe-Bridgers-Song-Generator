@@ -2074,7 +2074,7 @@ MonoBehaviour:
   Path: FMODAssets/Desktop/Instruments.bank
   Name: Instruments
   StudioPath: bank:/Instruments
-  lastModified: 637637525492245193
+  lastModified: 637637924465562707
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -4416,7 +4416,7 @@ MonoBehaviour:
   - {fileID: -4054977999362079183}
   StringsBanks:
   - {fileID: 879168869272436084}
-  stringsBankWriteTime: 637637525492265133
+  stringsBankWriteTime: 637637924465572708
   cacheVersion: 6
 --- !u!114 &78738742197792906
 MonoBehaviour:
@@ -4796,7 +4796,7 @@ MonoBehaviour:
   Path: FMODAssets/Desktop/Instruments.strings.bank
   Name: Instruments.strings
   StudioPath: bank:/Instruments.strings
-  lastModified: 637637525492265133
+  lastModified: 637637924465572708
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -7682,6 +7682,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3216
+--- !u!114 &7506039678236833520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Intro/Looping
+  m_EditorClassIdentifier: 
+  Name: Looping
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &7580692659709656428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8360,7 +8380,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 8793049084212321398}
+  - {fileID: 7506039678236833520}
   MinDistance: 0
   MaxDistance: 0
   Length: 25600

@@ -53,13 +53,13 @@ public class VocalController : MonoBehaviour
             {
                 if (TimingController.instance.BarCount == 0)
                 {
-                    rand = Random.Range(1, 4);
+                    rand = Random.Range(0, 4);
                     clipLength = (ClipLength)rand;
 
                 }
                 else if (TimingController.instance.BarCount == 2)
                 {
-                    rand = Random.Range(1, 3);
+                    rand = Random.Range(0, 3);
                     clipLength = (ClipLength)rand;
                 }
 
